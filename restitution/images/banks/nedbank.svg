@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#006341"/>
+    <!-- Nedbank Diamond N -->
+    <polygon points="34,12 52,32 34,52 16,32" fill="none" stroke="#8DC63F" stroke-width="3"/>
+    <path d="M28 39 V25 L40 39 V25" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="62" y="40" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="23" letter-spacing="0.8" fill="#ffffff">NEDBANK</text>
+  </svg>

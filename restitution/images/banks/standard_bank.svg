@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#0033A1"/>
+    <!-- Official Standard Bank Shield Crest -->
+    <path d="M22 14 H46 V32 C46 43 34 50 34 50 C34 50 22 43 22 32 Z" fill="#ffffff"/>
+    <path d="M26 18 H42 V31 C42 39 34 45 34 45 C34 45 26 39 26 31 Z" fill="#0066CC"/>
+    <path d="M29 25 Q34 20 39 25 Q34 32 29 37" stroke="#ffffff" stroke-width="2.5" fill="none"/>
+    <text x="56" y="31" font-family="Arial, Montserrat, sans-serif" font-weight="800" font-size="17" fill="#ffffff">Standard</text>
+    <text x="56" y="48" font-family="Arial, Montserrat, sans-serif" font-weight="800" font-size="17" fill="#ffffff">Bank</text>
+  </svg>

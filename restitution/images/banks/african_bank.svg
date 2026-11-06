@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#003B7A"/>
+    <circle cx="34" cy="32" r="17" fill="#6CBE45"/>
+    <path d="M27 38 L34 22 L41 38 Z" fill="#ffffff"/>
+    <text x="58" y="31" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="16" fill="#ffffff">AFRICAN</text>
+    <text x="58" y="48" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="16" fill="#6CBE45">BANK</text>
+  </svg>

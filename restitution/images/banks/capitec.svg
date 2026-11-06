@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#ffffff"/>
+    <!-- Official Capitec Red & Blue Interlocking Ribbons -->
+    <path d="M18 30 C18 17, 30 12, 42 18 C34 18, 28 23, 28 30 C28 37, 34 42, 42 42 L42 49 C28 49, 18 41, 18 30 Z" fill="#00486C"/>
+    <path d="M52 34 C52 47, 40 52, 28 46 C36 46, 42 41, 42 34 C42 27, 36 22, 28 22 L28 15 C42 15, 52 23, 52 34 Z" fill="#E61E2A"/>
+    <text x="62" y="40" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="25" letter-spacing="0.5" fill="#00486C">CAPITEC</text>
+  </svg>

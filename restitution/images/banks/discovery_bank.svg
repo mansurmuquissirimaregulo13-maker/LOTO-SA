@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#0F1E36"/>
+    <circle cx="34" cy="32" r="17" fill="none" stroke="#D4AF37" stroke-width="3.5"/>
+    <path d="M25 32 Q34 18 43 32 Q34 46 25 32 Z" fill="#D4AF37"/>
+    <text x="58" y="32" font-family="Arial, Montserrat, sans-serif" font-weight="800" font-size="16" fill="#ffffff">Discovery</text>
+    <text x="58" y="48" font-family="Arial, Montserrat, sans-serif" font-weight="700" font-size="14" fill="#D4AF37">BANK</text>
+  </svg>

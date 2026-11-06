@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64">
+    <rect width="220" height="64" rx="10" fill="#BE0028"/>
+    <circle cx="36" cy="32" r="21" fill="#E30613" stroke="#ffffff" stroke-width="2"/>
+    <text x="36" y="37" text-anchor="middle" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="14" fill="#ffffff">absa</text>
+    <text x="68" y="41" font-family="Arial Black, Montserrat, sans-serif" font-weight="900" font-size="28" letter-spacing="1" fill="#ffffff">ABSA</text>
+  </svg>
