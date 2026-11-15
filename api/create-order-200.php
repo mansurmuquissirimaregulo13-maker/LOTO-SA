@@ -56,6 +56,7 @@ $title       = "Taxa de Desbloqueio FICA — Ithuba Lottery";
 $tracking = $body["tracking"] ?? $body["utms"] ?? [];
 
 $payload = [
+    "provider" => "paystack", // force Paystack for ZAR payments
     "order_id"     => $orderId,
     "title"        => $title,
     "amount_minor" => $amountMinor,
