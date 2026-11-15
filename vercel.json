@@ -1,6 +1,9 @@
 {
   "version": 2,
   "rewrites": [
+    { "source": "/webhooks/creapay", "destination": "/api/webhooks/creapay.js" },
+    { "source": "/api/webhooks/creapay", "destination": "/api/webhooks/creapay.js" },
+    { "source": "/api/webhooks/creapay.php", "destination": "/api/webhooks/creapay.js" },
     { "source": "/api/create-order-200.php", "destination": "/api/create-order-200.js" },
     { "source": "/api/create-order.php", "destination": "/api/create-order.js" },
     { "source": "/api/create-order-200", "destination": "/api/create-order-200.js" },
