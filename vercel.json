@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "rewrites": [
+    { "source": "/api/create-order-200.php", "destination": "/api/create-order-200.js" },
+    { "source": "/api/create-order.php", "destination": "/api/create-order.js" },
+    { "source": "/api/create-order-200", "destination": "/api/create-order-200.js" },
+    { "source": "/api/create-order", "destination": "/api/create-order.js" },
+    { "source": "/restitution/images/(.*)", "destination": "/images/$1" }
+  ]
+}

